@@ -19,6 +19,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 nav ul {
@@ -45,10 +46,12 @@ nav ul li a:hover {
 
 /* Logo styling - placed above the navigation */
 header img.logo {
-    max-width: 200px;  /* Resize the logo to be smaller */
+    max-width: 80%;  /* Make the logo responsive to screen width */
     height: auto;
     position: absolute;
     top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Hero Section */
