@@ -28,7 +28,7 @@ nav ul li a:hover {
 }
 
 nav ul li img.logo {
-    width: 50px;  /* Adjust logo size */
-    height: auto;
+    width: 120px;  /* Adjust the width of the logo */
+    height: auto;  /* Keep aspect ratio */
     margin-right: 20px;
 }
