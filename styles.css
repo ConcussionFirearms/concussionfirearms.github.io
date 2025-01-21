@@ -46,10 +46,10 @@ nav ul li a:hover {
 
 /* Logo styling - placed above the navigation */
 header img.logo {
-    max-width: 80%;  /* Make the logo responsive to screen width */
+    max-width: 80%;  /* Allow logo to resize based on screen size */
     height: auto;
     position: absolute;
-    top: -70px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -137,4 +137,49 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 30px;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    header img.logo {
+        max-width: 60%;  /* Resize logo on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img.logo {
+        max-width: 50%;  /* Further reduce logo size on very small screens */
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
 }
