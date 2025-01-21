@@ -46,7 +46,8 @@ nav ul li a:hover {
 
 /* Logo styling - placed above the navigation */
 header img.logo {
-    max-width: 80%;  /* Allow logo to resize based on screen size */
+    max-width: 100%;  /* Logo takes full width of the available container */
+    width: 100%;  /* Forces the logo to scale responsively */
     height: auto;
     position: absolute;
     top: -50px;
@@ -142,7 +143,7 @@ footer {
 /* Media Queries for smaller devices */
 @media (max-width: 768px) {
     header img.logo {
-        max-width: 60%;  /* Resize logo on smaller screens */
+        max-width: 80%;  /* Resize logo on smaller screens */
     }
 
     .hero h1 {
@@ -164,7 +165,7 @@ footer {
 
 @media (max-width: 480px) {
     header img.logo {
-        max-width: 50%;  /* Further reduce logo size on very small screens */
+        max-width: 60%;  /* Resize logo further for very small screens */
     }
 
     .hero h1 {
