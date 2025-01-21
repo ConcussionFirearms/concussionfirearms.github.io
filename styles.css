@@ -24,22 +24,17 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1200px;
     padding: 0 20px;
 }
 
-nav .logo-container {
-    flex: 1;
-}
-
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
 }
 
 nav ul li {
@@ -57,12 +52,16 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Logo styling */
-header img.logo {
-    max-width: 100%;  /* Logo takes full width of the available container */
-    width: 100%;  /* Forces the logo to scale responsively */
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-section .logo {
+    max-width: 100%;
     height: auto;
-    max-height: 100px;  /* Adjust the logo height */
+    max-height: 150px;  /* Adjust logo height */
 }
 
 /* Hero Section */
@@ -152,10 +151,6 @@ footer {
 
 /* Media Queries for smaller devices */
 @media (max-width: 768px) {
-    header img.logo {
-        max-width: 80%;  /* Resize logo on smaller screens */
-    }
-
     .hero h1 {
         font-size: 36px;
     }
@@ -174,10 +169,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    header img.logo {
-        max-width: 60%;  /* Resize logo further for very small screens */
-    }
-
     .hero h1 {
         font-size: 28px;
     }
