@@ -45,7 +45,7 @@ nav ul li a:hover {
 
 /* Logo styling - placed above the navigation */
 header img.logo {
-    max-width: 250px;
+    max-width: 200px;  /* Resize the logo to be smaller */
     height: auto;
     position: absolute;
     top: -70px;
@@ -53,7 +53,7 @@ header img.logo {
 
 /* Hero Section */
 .hero {
-    background-color: #2e3d52;
+    background-color: #2e3d52;  /* Dark blue-gray color for hero section */
     color: white;
     text-align: center;
     padding: 150px 20px 80px;  /* Add extra space for the logo */
@@ -98,7 +98,7 @@ header img.logo {
 
 /* Call to Action */
 .cta {
-    background-color: #007BFF;
+    background-color: #222;  /* Dark color to match the header */
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -118,13 +118,13 @@ header img.logo {
     font-size: 18px;
     padding: 10px 30px;
     color: white;
-    background-color: #222;
+    background-color: #333;  /* Darker background for the button */
     text-decoration: none;
     border-radius: 5px;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #555;
 }
 
 /* Footer */
