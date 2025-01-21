@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212;  /* Dark background for the body */
+    color: #e0e0e0;  /* Light gray text for contrast */
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: #222;  /* Dark color for the top */
+    background-color: #1e1e1e;  /* Dark color for the header */
     padding: 20px 0;
     display: flex;
     justify-content: center;
@@ -43,13 +43,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #e0e0e0;  /* Light gray for links */
     text-decoration: none;
     font-size: 18px;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #1e90ff;  /* Blue on hover for contrast */
 }
 
 /* Logo Section */
@@ -61,15 +62,15 @@ nav ul li a:hover {
 .logo-section .logo {
     max-width: 100%;
     height: auto;
-    max-height: 150px;  /* Adjust logo height */
+    max-height: 150px;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #2e3d52;  /* Dark blue-gray color for hero section */
-    color: white;
+    background-color: #333;  /* Dark background for the hero section */
+    color: #e0e0e0;  /* Light text for contrast */
     text-align: center;
-    padding: 150px 20px 80px;  /* Add extra space for the logo */
+    padding: 50px 20px;  /* Reduced padding for less height */
 }
 
 .hero h1 {
@@ -78,15 +79,15 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
 }
 
 /* About Section */
 .about {
     text-align: center;
     padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #1e1e1e;  /* Dark background for the about section */
 }
 
 .about h2 {
@@ -142,7 +143,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #222;  /* Matching the header color */
+    background-color: #1e1e1e;  /* Dark footer to match theme */
     color: white;
     text-align: center;
     padding: 10px 0;
