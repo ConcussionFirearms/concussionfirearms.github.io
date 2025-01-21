@@ -14,12 +14,11 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #222;
+    background-color: #222;  /* Dark color for the top */
     padding: 10px 0;
     display: flex;
-    justify-content: center; /* Center everything */
-    align-items: center; /* Align vertically */
-    position: relative; /* For positioning the logo */
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -31,7 +30,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;  /* Space between navigation items */
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -46,10 +45,10 @@ nav ul li a:hover {
 
 /* Logo styling - placed above the navigation */
 header img.logo {
-    max-width: 250px;  /* Adjust logo size */
+    max-width: 250px;
     height: auto;
     position: absolute;
-    top: -70px;  /* Move logo above navigation */
+    top: -70px;
 }
 
 /* Hero Section */
@@ -57,7 +56,7 @@ header img.logo {
     background-color: #2e3d52;
     color: white;
     text-align: center;
-    padding: 150px 20px 80px; /* Adjust padding to make room for the logo */
+    padding: 150px 20px 80px;  /* Add extra space for the logo */
 }
 
 .hero h1 {
@@ -130,7 +129,7 @@ header img.logo {
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #222;  /* Matching the header color */
     color: white;
     text-align: center;
     padding: 10px 0;
