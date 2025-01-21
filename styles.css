@@ -18,7 +18,8 @@ header {
     padding: 10px 0;
     display: flex;
     justify-content: center; /* Center everything */
-    align-items: center; /* Align logo vertically */
+    align-items: center; /* Align vertically */
+    position: relative; /* For positioning the logo */
 }
 
 nav ul {
@@ -43,11 +44,12 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Logo styling */
-nav ul li img.logo {
-    max-width: 200px;  /* Max width for the logo to prevent it from getting too large */
-    height: auto;  /* Maintain aspect ratio */
-    margin-right: 20px;  /* Adjust space between the logo and nav items */
+/* Logo styling - placed above the navigation */
+header img.logo {
+    max-width: 250px;  /* Adjust logo size */
+    height: auto;
+    position: absolute;
+    top: -70px;  /* Move logo above navigation */
 }
 
 /* Hero Section */
@@ -55,7 +57,7 @@ nav ul li img.logo {
     background-color: #2e3d52;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 150px 20px 80px; /* Adjust padding to make room for the logo */
 }
 
 .hero h1 {
