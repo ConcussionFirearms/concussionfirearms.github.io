@@ -15,17 +15,30 @@ body {
 /* Header Styles */
 header {
     background-color: #222;  /* Dark color for the top */
-    padding: 10px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+nav .logo-container {
+    flex: 1;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -44,15 +57,12 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Logo styling - placed above the navigation */
+/* Logo styling */
 header img.logo {
     max-width: 100%;  /* Logo takes full width of the available container */
     width: 100%;  /* Forces the logo to scale responsively */
     height: auto;
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    max-height: 100px;  /* Adjust the logo height */
 }
 
 /* Hero Section */
