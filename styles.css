@@ -1,22 +1,21 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
-    color: white;
+    box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Header Styles */
 header {
     background-color: #222;
     padding: 10px 0;
-    max-width: 100%;  /* Ensure header doesn't stretch too wide */
     display: flex;
     justify-content: center; /* Center everything */
     align-items: center; /* Align logo vertically */
@@ -31,7 +30,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;  /* Reduce space between nav items */
+    margin: 0 20px;  /* Space between navigation items */
 }
 
 nav ul li a {
@@ -44,80 +43,94 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Logo styling */
 nav ul li img.logo {
-    width: 80px;  /* Smaller logo width */
+    width: 100px;  /* Adjust the logo width to fit better */
     height: auto;  /* Maintain aspect ratio */
-    margin-right: 15px;  /* Adjust margin to fit better */
+    margin-right: 20px;  /* Adjust space between the logo and nav items */
 }
 
 /* Hero Section */
 .hero {
-    background-color: #333;
+    background-color: #2e3d52;
+    color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 50px;
-    margin: 0;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /* About Section */
 .about {
-    background-color: #444;
-    padding: 50px 20px;
     text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
 }
 
 .about h2 {
-    font-size: 32px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .about p {
     font-size: 18px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-/* Call to Action Section */
+.about ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.about ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Call to Action */
 .cta {
-    background-color: #555;
+    background-color: #007BFF;
+    color: white;
     text-align: center;
     padding: 50px 20px;
 }
 
 .cta h2 {
-    font-size: 28px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .cta p {
     font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #222;
+    font-size: 18px;
+    padding: 10px 30px;
     color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
+    background-color: #222;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .cta-button:hover {
-    background-color: #444;
+    background-color: #0056b3;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    padding: 10px 0;
+    margin-top: 30px;
 }
