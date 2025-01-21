@@ -45,7 +45,7 @@ nav ul li a:hover {
 
 /* Logo styling */
 nav ul li img.logo {
-    width: 100px;  /* Adjust the logo width to fit better */
+    max-width: 200px;  /* Max width for the logo to prevent it from getting too large */
     height: auto;  /* Maintain aspect ratio */
     margin-right: 20px;  /* Adjust space between the logo and nav items */
 }
