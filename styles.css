@@ -1,12 +1,29 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Header Styles */
 header {
     background-color: #222;
     padding: 10px 0;
+    max-width: 100%;  /* Ensure header doesn't stretch too wide */
+    display: flex;
+    justify-content: center; /* Center everything */
+    align-items: center; /* Align logo vertically */
 }
 
 nav ul {
     list-style-type: none;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +31,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 10px;  /* Reduce space between nav items */
 }
 
 nav ul li a {
@@ -28,7 +45,79 @@ nav ul li a:hover {
 }
 
 nav ul li img.logo {
-    width: 120px;  /* Adjust the width of the logo */
-    height: auto;  /* Keep aspect ratio */
-    margin-right: 20px;
+    width: 80px;  /* Smaller logo width */
+    height: auto;  /* Maintain aspect ratio */
+    margin-right: 15px;  /* Adjust margin to fit better */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    background-color: #444;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+}
+
+.about p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #555;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta h2 {
+    font-size: 28px;
+}
+
+.cta p {
+    font-size: 18px;
+}
+
+.cta-button {
+    background-color: #222;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #444;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
