@@ -24,14 +24,14 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline-block; /* Ensure buttons are inline and shrink */
+    margin: 0 10px; /* Reduced space between items */
 }
 
 nav ul li a {
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted font size for smaller screens */
 }
 
 nav ul li a:hover {
@@ -48,14 +48,13 @@ nav ul li a:hover {
 
 /* Hero Logo */
 .hero-logo {
-    max-width: 60%; /* Shrink the logo for larger screens */
+    max-width: 60%; /* Shrink logo for larger screens */
     height: auto;
     margin-bottom: 20px; /* Space between logo and heading */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Hero Heading */
 .hero h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -171,9 +170,19 @@ footer p {
         font-size: 14px;
     }
 
-    /* Resize the logo for smaller screens */
+    /* Adjust the logo on mobile */
     .hero-logo {
-        max-width: 80%; /* Shrink logo size on mobile devices */
+        max-width: 50%; /* Shrink logo more for mobile screens */
+    }
+
+    /* Adjust the size of the navigation buttons on mobile */
+    nav ul li {
+        display: inline-block;
+        margin: 0 5px; /* Reduced margin for mobile screens */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Smaller text size for buttons */
     }
 
     /* Make the SBA logo smaller on smaller screens */
