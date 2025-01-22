@@ -163,7 +163,7 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-logo {
-        max-width: 50%; /* Shrink logo for mobile screens */
+        max-width: 75%; /* Shrink logo for mobile screens */
     }
 
     /* Adjust the size of the navigation buttons on mobile */
