@@ -16,46 +16,29 @@ body {
 header {
     background-color: #222;
     padding: 10px 0;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
-    display: flex;
-    gap: 20px;
+    text-align: center;
+    display: flex; /* Use flexbox to make buttons inline */
+    justify-content: center; /* Center the navigation items */
+    padding-left: 0;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 10px; /* Adjust margin for better spacing */
 }
 
 nav ul li a {
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted font size for better fit */
+    display: inline-block;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-}
-
-/* Hamburger Icon (for mobile) */
-.hamburger {
-    display: none; /* Hide by default */
-    font-size: 30px;
-    cursor: pointer;
 }
 
 /* Hero Section */
@@ -78,14 +61,9 @@ nav ul li a:hover {
 
 /* Hero Logo */
 .hero-logo {
-    text-align: center; /* Center the logo */
-}
-
-.hero-logo img {
-    max-width: 80%; /* Ensure logo doesn't stretch on large screens */
+    max-width: 80%; /* Fit logo to screen width */
     height: auto;
-    display: block;
-    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 20px; /* Space between logo and heading */
 }
 
 /* About Section */
@@ -173,28 +151,38 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .cta p {
+        font-size: 14px;
+    }
+
+    /* Adjust the header navigation for mobile */
     nav ul {
-        display: none; /* Hide the menu by default on mobile */
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 20px;
+        flex-direction: row; /* Ensure the links are in a row */
+        justify-content: space-around; /* Evenly space the items */
+        padding: 0;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 0 5px; /* Decrease margin to save space */
     }
 
-    .hamburger {
-        display: block; /* Show the hamburger icon */
-    }
-
-    .hero-logo img {
-        max-width: 60%; /* Make logo smaller on mobile */
-    }
-
-    /* Show the menu when hamburger is clicked */
-    .menu-active {
-        display: flex;
+    nav ul li a {
+        font-size: 14px; /* Smaller font size for mobile */
     }
 }
