@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
+    background-color: #121212; /* Dark background for dark mode */
     color: #f4f4f4;
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: #1c1c1c;
+    background-color: #222;
     padding: 10px 0;
 }
 
@@ -25,11 +25,11 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: #f4f4f4;
     text-decoration: none;
     font-size: 18px;
 }
@@ -40,10 +40,10 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #2e3d52;
+    background-color: #2e3d52; /* Dark blue tone */
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px; /* Reduced padding for less height */
 }
 
 .hero h1 {
@@ -53,36 +53,65 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 18px;
-}
-
-/* About and Services Sections */
-.about, .services {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #1c1c1c;
-    color: #f4f4f4;
-}
-
-.about h2, .services h2 {
-    font-size: 28px;
     margin-bottom: 20px;
 }
 
-.about ul, .services ul {
+/* Hero Logo */
+.hero-logo {
+    max-width: 80%; /* Fit logo to screen width */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and heading */
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1e1e1e; /* Slightly lighter than the body */
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #007BFF; /* Accent color */
+}
+
+.about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.about ul {
     list-style-type: none;
     margin-top: 20px;
 }
 
-.about ul li, .services ul li {
+.about ul li {
     font-size: 16px;
     margin: 10px 0;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 15px;
+/* Call to Action */
+.cta {
+    background-color: #2e3d52; /* Dark blue tone to match the hero */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cta p {
     font-size: 16px;
-    padding: 10px 25px;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
     color: white;
     background-color: #007BFF;
     text-decoration: none;
@@ -93,23 +122,49 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-/* Footer Styles */
+/* Footer Section */
 footer {
-    background-color: #1c1c1c;
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-.certification img {
-    max-width: 200px; /* Ensures the logo stays a manageable size */
-    height: auto; /* Keeps the aspect ratio intact */
+/* SBA Logo in Footer */
+.sba-logo img {
+    max-width: 150px; /* Limiting the max width to 150px */
+    height: auto;
     margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .cta p {
+        font-size: 14px;
+    }
 }
