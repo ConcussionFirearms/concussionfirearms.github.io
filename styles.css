@@ -62,7 +62,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     .hero-logo img {
         content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Use mobile logo */
-        width: 80%; /* Adjust size for mobile */
+        width: 100%; /* Adjust size for mobile */
         margin: 0 auto;
     }
 }
