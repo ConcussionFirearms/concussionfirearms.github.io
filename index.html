@@ -57,5 +57,14 @@
             </div>
         </div>
     </footer>
+    <!-- JavaScript to toggle mobile menu visibility -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('menu-active');
+        });
+    </script>
 </body>
 </html>
