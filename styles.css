@@ -44,6 +44,10 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 40px 20px; /* Reduced padding for less height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero h1 {
@@ -58,9 +62,10 @@ nav ul li a:hover {
 
 /* Hero Logo */
 .hero-logo {
-    max-width: 80%; /* Fit logo to screen width */
+    width: 80%; /* Set width as a percentage */
+    max-width: 600px; /* Ensure it doesn't get too large */
     height: auto;
-    margin-bottom: 20px; /* Space between logo and heading */
+    margin-bottom: 20px;
 }
 
 /* About Section */
