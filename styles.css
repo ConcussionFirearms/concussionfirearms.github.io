@@ -12,38 +12,12 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
-header {
-    background-color: #222;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #f4f4f4;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
 /* Hero Section */
 .hero {
     background-color: #2e3d52; /* Dark blue tone */
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Reduced padding for less height */
+    padding: 40px 20px; /* Adjusting padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,94 +36,11 @@ nav ul li a:hover {
 
 /* Hero Logo */
 .hero-logo {
-    width: 80%; /* Set width as a percentage */
-    max-width: 500px; /* Ensure it doesn't get too large */
+    width: 100%; /* Full width of container */
+    max-width: 400px; /* Set a max width for larger screens */
     height: auto;
     margin-bottom: 20px;
     display: block;
-}
-
-/* About Section */
-.about {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #1e1e1e; /* Slightly lighter than the body */
-}
-
-.about h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #007BFF; /* Accent color */
-}
-
-.about p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.about ul {
-    list-style-type: none;
-    margin-top: 20px;
-}
-
-.about ul li {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-/* Call to Action */
-.cta {
-    background-color: #2e3d52; /* Dark blue tone to match the hero */
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.cta h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.cta-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    color: white;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-/* Footer Section */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-/* SBA Logo in Footer */
-.sba-logo img {
-    max-width: 150px; /* Limit max width of the SBA logo */
-    height: auto;
-    margin-top: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Responsive Design */
@@ -162,21 +53,9 @@ footer p {
         font-size: 16px;
     }
 
-    .about h2 {
-        font-size: 24px;
-    }
-
-    .cta h2 {
-        font-size: 24px;
-    }
-
-    .cta p {
-        font-size: 14px;
-    }
-
-    /* Adjust the Hero Logo size for smaller screens */
+    /* Adjust Hero Logo size for mobile */
     .hero-logo {
-        width: 90%; /* Reduce logo size more for mobile */
-        max-width: 300px; /* Ensure it doesn’t get too large */
+        width: 90%;  /* Logo occupies 90% of the screen width */
+        max-width: 300px; /* Limit the maximum size on mobile */
     }
 }
