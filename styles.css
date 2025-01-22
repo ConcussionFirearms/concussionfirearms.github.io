@@ -172,4 +172,9 @@ footer p {
     .sba-logo img {
         max-width: 120px; /* Resize SBA logo for mobile screens */
     }
+
+    /* Adjust the Hero Logo size for smaller screens */
+    .hero-logo {
+        max-width: 60%; /* Reduce size for mobile */
+    }
 }
