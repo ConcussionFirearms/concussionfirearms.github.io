@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background for dark mode */
-    color: #f4f4f4;
+    background-color: #1a1a1a;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -29,7 +29,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #f4f4f4;
+    color: white;
     text-decoration: none;
     font-size: 18px;
 }
@@ -40,10 +40,10 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: #2e3d52; /* Dark blue tone */
+    background-color: #2e3d52;
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Reduced padding for less height */
+    padding: 60px 20px;
 }
 
 .hero h1 {
@@ -53,115 +53,52 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-/* Hero Logo */
-.hero-logo {
-    max-width: 80%; /* Fit logo to screen width */
-    height: auto;
-    margin-bottom: 20px; /* Space between logo and heading */
-}
-
-/* About Section */
-.about {
+/* Services Section */
+.services {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #1e1e1e; /* Slightly lighter than the body */
+    padding: 60px 20px;
+    background-color: #333333;
 }
 
-.about h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #007BFF; /* Accent color */
-}
-
-.about p {
-    font-size: 16px;
+.services h2 {
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
-.about ul {
+.services ul {
     list-style-type: none;
     margin-top: 20px;
 }
 
-.about ul li {
-    font-size: 16px;
+.services ul li {
+    font-size: 18px;
     margin: 10px 0;
 }
 
-/* Call to Action */
-.cta {
-    background-color: #2e3d52; /* Dark blue tone to match the hero */
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.cta h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
+/* CTA Button Style */
 .cta-button {
-    font-size: 16px;
-    padding: 10px 20px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 30px;
     color: white;
-    background-color: #007BFF;
+    background-color: #0056b3;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #003f7d;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
     background-color: #222;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer p {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-/* SBA Logo in Footer */
-.sba-logo img {
-    max-width: 200px; /* Limit width of the SBA logo */
-    height: auto;
-    margin-top: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .about h2 {
-        font-size: 24px;
-    }
-
-    .cta h2 {
-        font-size: 24px;
-    }
-
-    .cta p {
-        font-size: 14px;
-    }
+    padding: 10px 0;
+    margin-top: 30px;
 }
