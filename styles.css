@@ -50,12 +50,21 @@ nav ul li a:hover {
 }
 
 /* Hero Logo */
-.hero-logo {
-    width: 100%; /* Ensure it doesn't overflow */
-    max-width: 60%; /* For large screens, shrink to 60% of the container */
+/* Default to Desktop Logo */
+.hero-logo img {
+    width: 100%; /* Full width for desktop */
     height: auto;
-    margin: 0 auto; /* Center the image horizontally */
     display: block;
+    margin: 0 auto;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hero-logo img {
+        content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Use mobile logo */
+        width: 80%; /* Adjust size for mobile */
+        margin: 0 auto;
+    }
 }
 
 .hero h1 {
