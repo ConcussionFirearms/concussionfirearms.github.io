@@ -7,34 +7,20 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;  /* Dark background for the body */
-    color: #e0e0e0;  /* Light gray text for contrast */
+    background-color: #121212; /* Dark background for dark mode */
+    color: #f4f4f4;
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: #1e1e1e;  /* Dark color for the header */
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
+    background-color: #222;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 nav ul li {
@@ -43,60 +29,55 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #e0e0e0;  /* Light gray for links */
+    color: #f4f4f4;
     text-decoration: none;
     font-size: 18px;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: #1e90ff;  /* Blue on hover for contrast */
-}
-
-/* Logo Section */
-.logo-section {
-    text-align: center;
-    padding: 20px 0;
-}
-
-.logo-section .logo {
-    max-width: 100%;
-    height: auto;
-    max-height: 150px;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #333;  /* Dark background for the hero section */
-    color: #e0e0e0;  /* Light text for contrast */
+    background-color: #2e3d52; /* Dark blue tone */
+    color: white;
     text-align: center;
-    padding: 50px 20px;  /* Reduced padding for less height */
+    padding: 40px 20px; /* Reduced padding for less height */
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Hero Logo */
+.hero-logo {
+    max-width: 80%; /* Fit logo to screen width */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and heading */
 }
 
 /* About Section */
 .about {
     text-align: center;
-    padding: 60px 20px;
-    background-color: #1e1e1e;  /* Dark background for the about section */
+    padding: 40px 20px;
+    background-color: #1e1e1e; /* Slightly lighter than the body */
 }
 
 .about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #007BFF; /* Accent color */
 }
 
 .about p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
@@ -106,72 +87,66 @@ nav ul li a:hover {
 }
 
 .about ul li {
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0;
 }
 
 /* Call to Action */
 .cta {
-    background-color: #222;  /* Dark color to match the header */
+    background-color: #2e3d52; /* Dark blue tone to match the hero */
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 .cta h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
 .cta p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .cta-button {
-    font-size: 18px;
-    padding: 10px 30px;
+    font-size: 16px;
+    padding: 10px 20px;
     color: white;
-    background-color: #333;  /* Darker background for the button */
+    background-color: #007BFF;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .cta-button:hover {
-    background-color: #555;
+    background-color: #0056b3;
 }
 
-/* Footer */
+/* Footer Section */
 footer {
-    background-color: #1e1e1e;  /* Dark footer to match theme */
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
-/* Media Queries for smaller devices */
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* SBA Logo in Footer */
+.sba-logo img {
+    max-width: 200px; /* Limit width of the SBA logo */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .about h2 {
-        font-size: 30px;
-    }
-
-    .cta h2 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .hero p {
@@ -184,5 +159,9 @@ footer {
 
     .cta h2 {
         font-size: 24px;
+    }
+
+    .cta p {
+        font-size: 14px;
     }
 }
