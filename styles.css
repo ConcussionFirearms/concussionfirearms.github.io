@@ -21,20 +21,17 @@ header {
 nav ul {
     list-style-type: none;
     text-align: center;
-    display: flex; /* Use flexbox to make buttons inline */
-    justify-content: center; /* Center the navigation items */
-    padding-left: 0;
 }
 
 nav ul li {
-    margin: 0 10px; /* Adjust margin for better spacing */
+    display: inline;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 16px; /* Adjusted font size for better fit */
-    display: inline-block;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -49,6 +46,16 @@ nav ul li a:hover {
     padding: 40px 20px; /* Reduced padding for less height */
 }
 
+/* Hero Logo */
+.hero-logo {
+    max-width: 70%; /* Adjust this for better scaling */
+    height: auto;
+    margin-bottom: 20px; /* Space between logo and heading */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure the hero section contents are centered on all screen sizes */
 .hero h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -57,13 +64,6 @@ nav ul li a:hover {
 .hero p {
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-/* Hero Logo */
-.hero-logo {
-    max-width: 80%; /* Fit logo to screen width */
-    height: auto;
-    margin-bottom: 20px; /* Space between logo and heading */
 }
 
 /* About Section */
@@ -171,18 +171,13 @@ footer p {
         font-size: 14px;
     }
 
-    /* Adjust the header navigation for mobile */
-    nav ul {
-        flex-direction: row; /* Ensure the links are in a row */
-        justify-content: space-around; /* Evenly space the items */
-        padding: 0;
+    /* Resize the logo for smaller screens */
+    .hero-logo {
+        max-width: 90%; /* Shrink logo size on mobile devices */
     }
 
-    nav ul li {
-        margin: 0 5px; /* Decrease margin to save space */
-    }
-
-    nav ul li a {
-        font-size: 14px; /* Smaller font size for mobile */
+    /* Make the SBA logo smaller on smaller screens */
+    .sba-logo img {
+        max-width: 120px; /* Resize SBA logo for mobile screens */
     }
 }
