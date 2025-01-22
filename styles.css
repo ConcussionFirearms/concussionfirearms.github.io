@@ -5,11 +5,41 @@
     box-sizing: border-box;
 }
 
+/* Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212; /* Dark background for dark mode */
     color: #f4f4f4;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -17,7 +47,7 @@ body {
     background-color: #2e3d52; /* Dark blue tone */
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Adjusting padding */
+    padding: 40px 20px; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,10 +67,48 @@ body {
 /* Hero Logo */
 .hero-logo {
     width: 100%; /* Full width of container */
-    max-width: 400px; /* Set a max width for larger screens */
+    max-width: 400px; /* Max width for larger screens */
     height: auto;
     margin-bottom: 20px;
     display: block;
+}
+
+/* Call to Action */
+.cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* SBA Logo in Footer */
+.sba-logo img {
+    max-width: 150px; /* Limit max width of the SBA logo */
+    height: auto;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Responsive Design */
@@ -57,5 +125,36 @@ body {
     .hero-logo {
         width: 90%;  /* Logo occupies 90% of the screen width */
         max-width: 300px; /* Limit the maximum size on mobile */
+    }
+
+    /* Reduce margin between navigation items on small screens */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust the footer for mobile */
+    footer p {
+        font-size: 12px;
+    }
+
+    /* Make the SBA logo smaller on smaller screens */
+    .sba-logo img {
+        max-width: 120px; /* Resize SBA logo for mobile screens */
+    }
+}
+
+/* Larger screens (e.g., tablets, desktop) */
+@media (min-width: 769px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-logo {
+        max-width: 450px; /* Max logo size on larger screens */
     }
 }
