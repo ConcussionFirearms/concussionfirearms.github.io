@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #121212;
+    color: #f4f4f4;
     line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-    background-color: #222;
+    background-color: #1c1c1c;
     padding: 10px 0;
 }
 
@@ -25,7 +25,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -43,7 +43,7 @@ nav ul li a:hover {
     background-color: #2e3d52;
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
 .hero h1 {
@@ -53,52 +53,63 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 18px;
-    font-weight: bold;
 }
 
-/* Services Section */
-.services {
+/* About and Services Sections */
+.about, .services {
     text-align: center;
-    padding: 60px 20px;
-    background-color: #333333;
+    padding: 40px 20px;
+    background-color: #1c1c1c;
+    color: #f4f4f4;
 }
 
-.services h2 {
-    font-size: 32px;
+.about h2, .services h2 {
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
-.services ul {
+.about ul, .services ul {
     list-style-type: none;
     margin-top: 20px;
 }
 
-.services ul li {
-    font-size: 18px;
+.about ul li, .services ul li {
+    font-size: 16px;
     margin: 10px 0;
 }
 
-/* CTA Button Style */
 .cta-button {
     display: inline-block;
-    font-size: 18px;
-    padding: 10px 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 10px 25px;
     color: white;
-    background-color: #0056b3;
+    background-color: #007BFF;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
 }
 
 .cta-button:hover {
-    background-color: #003f7d;
+    background-color: #0056b3;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #222;
+    background-color: #1c1c1c;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certification img {
+    max-width: 200px; /* Ensures the logo stays a manageable size */
+    height: auto; /* Keeps the aspect ratio intact */
+    margin-top: 10px;
 }
