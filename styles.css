@@ -105,6 +105,27 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
+/* Services Section */
+.services {
+    text-align: center; /* Center text */
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+}
+
+.services h2, .services h3 {
+    color: #007BFF; /* Accent color for headings */
+}
+
+.services ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.services ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
 /* Call to Action */
 .cta {
     background-color: #2e3d52; /* Dark blue tone to match the hero */
