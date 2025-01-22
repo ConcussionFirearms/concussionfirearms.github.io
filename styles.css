@@ -138,7 +138,7 @@ footer p {
 
 /* SBA Logo in Footer */
 .sba-logo img {
-    max-width: 150px; /* Limiting the max width of the SBA logo */
+    max-width: 150px; /* Limit max width of the SBA logo */
     height: auto;
     margin-top: 10px;
     display: block;
@@ -168,7 +168,8 @@ footer p {
         font-size: 14px;
     }
 
+    /* Make the SBA logo smaller on smaller screens */
     .sba-logo img {
-        max-width: 120px; /* Resize SBA logo for smaller screens */
+        max-width: 120px; /* Resize SBA logo for mobile screens */
     }
 }
