@@ -163,7 +163,7 @@ nav ul li a:hover {
 .contact .form-container {
     max-width: 640px; /* Same width as the iframe */
     margin: 0 auto; /* Center align the container */
-    padding: 10px;
+    padding: 5px;
     background-color: #B7B7B7; /* Medium gray background */
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Slight shadow */
