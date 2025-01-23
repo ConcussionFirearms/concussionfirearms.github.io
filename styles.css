@@ -24,14 +24,14 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+    display: inline-block; /* Ensure buttons are inline and shrink */
+    margin: 0 10px; /* Reduced space between items */
 }
 
 nav ul li a {
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px; /* Adjusted font size for smaller screens */
 }
 
 nav ul li a:hover {
@@ -43,24 +43,27 @@ nav ul li a:hover {
     background-color: #2e3d52; /* Dark blue tone */
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px; /* Reduced padding for less height */
     display: flex; 
     flex-direction: column; 
-    align-items: center;
+    align-items: center; /* Center content horizontally */
 }
 
 /* Hero Logo */
+/* Default to Desktop Logo */
 .hero-logo img {
-    width: 100%;
+    width: 100%; /* Full width for desktop */
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
+/* Mobile View */
 @media (max-width: 768px) {
     .hero-logo img {
-        content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Mobile logo */
-        width: 100%;
+        content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Use mobile logo */
+        width: 100%; /* Adjust size for mobile */
+        margin: 0 auto;
     }
 }
 
@@ -74,38 +77,88 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* Contact Page Styles */
-.contact {
-    text-align: center; /* Center text on the contact page */
+/* About Section */
+.about {
+    text-align: center;
     padding: 40px 20px;
-    background-color: #121212; /* Ensure dark background */
+    background-color: #1e1e1e; /* Slightly lighter than the body */
 }
 
-.contact h2, .contact h3 {
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
     color: #007BFF; /* Accent color */
 }
 
-.contact ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px auto;
+.about p {
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-.contact ul li {
+.about ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.about ul li {
     font-size: 16px;
     margin: 10px 0;
 }
 
-.contact iframe {
-    width: 100%; /* Full width of the page */
-    height: 80vh; /* Adjust to fit most screen sizes */
-    border: none;
+/* Services Section */
+.services {
+    text-align: center; /* Center text */
+    padding: 40px 20px;
+    background-color: #1e1e1e;
 }
 
-.contact .form-container {
-    background-color: transparent; /* No background, blend with the page */
-    padding: 0;
-    margin: 20px auto;
+.services h2, .services h3 {
+    color: #007BFF; /* Accent color for headings */
+}
+
+.services ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.services ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.services p {
+    margin-bottom: 20px; /* Add space after the paragraph */
+}
+
+/* Call to Action */
+.cta {
+    background-color: #2e3d52; /* Dark blue tone to match the hero */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
 }
 
 /* Footer Section */
@@ -122,24 +175,34 @@ footer p {
     font-size: 14px;
 }
 
+/* SBA Logo in Footer */
 .sba-logo img {
-    max-width: 150px;
+    max-width: 150px; /* Limit max width of the SBA logo */
     height: auto;
-    margin: 10px auto 0;
+    margin-top: 10px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-logo {
+        max-width: 75%; /* Shrink logo for mobile screens */
+    }
+
+    /* Adjust the size of the navigation buttons on mobile */
     nav ul li {
-        margin: 0 5px;
+        display: inline-block;
+        margin: 0 5px; /* Reduced margin for mobile screens */
     }
 
     nav ul li a {
-        font-size: 14px;
+        font-size: 14px; /* Smaller text size for buttons */
     }
 
+    /* Make the SBA logo smaller on smaller screens */
     .sba-logo img {
-        max-width: 120px;
+        max-width: 120px; /* Resize SBA logo for mobile screens */
     }
 }
