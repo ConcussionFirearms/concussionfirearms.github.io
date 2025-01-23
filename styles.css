@@ -232,6 +232,14 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
+/* Contact Page Unordered List Styles */
+.contact ul {
+    list-style-type: none; /* Removes bullets */
+    padding-left: 0; /* Removes default left padding */
+    margin-left: 0; /* Removes left margin */
+    text-align: center; /* Centers the list */
+}
+
 /* Call to Action */
 .cta {
     background-color: #2e3d52;
