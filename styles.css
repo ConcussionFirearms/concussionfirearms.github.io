@@ -159,12 +159,12 @@ nav ul li a:hover {
     text-align: center;
 }
 
-/* Google Form Box - Adds a medium gray box */
+/* Google Form Box - Adds a gray box */
 .contact .form-container {
     max-width: 640px; /* Same width as the iframe */
     margin: 0 auto; /* Center align the container */
-    padding: 20px;
-    background-color: #3a3a3a; /* Medium gray background */
+    padding: 15px;
+    background-color: #5a5a5a; /* Medium gray background */
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Slight shadow */
 }
