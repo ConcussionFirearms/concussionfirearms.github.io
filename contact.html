@@ -17,26 +17,44 @@
             </ul>
         </nav>
     </header>
-    
-    <section class="hero">
-        <h1>Contact Us</h1>
-        <p>Get in Touch for Inquiries or Custom Orders</p>
-    </section>
 
-    <section class="about">
-        <h2>Reach Out</h2>
-        <p>Have any questions or want to make an order? We would love to hear from you! You can contact us through the following ways:</p>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>At Concussion Firearms, we value open communication with our customers. Whether you have questions about our services, need advice on firearms, or want to place an order, we are here to help. Get in touch with us today!</p>
+
+        <h3>Our Contact Information</h3>
+        <p>If you need assistance, don’t hesitate to reach out. You can contact us through email, phone, or by visiting us in Cheyenne, WY. We’re here to serve you and help you make informed decisions about your firearm needs.</p>
+        
         <ul>
-            <li><strong>Email:</strong> ConcussionFirearms@outlook.com</li>
-            <li><strong>Phone:</strong> (307) 399-8254</li>
+            <li><strong>Email:</strong> <a href="mailto:ConcussionFirearms@outlook.com">ConcussionFirearms@outlook.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+13073998254">(307) 399-8254</a></li>
             <li><strong>Address:</strong> Cheyenne, WY 82009</li>
         </ul>
+
+        <h3>Get in Touch</h3>
+        <p>Feel free to reach out using the contact methods above, or use the form below to send us a message. We aim to respond to all inquiries promptly.</p>
+
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 Concussion Firearms. All rights reserved.</p>
-        <div class="sba-logo">
-            <img src="images/Service-Disabled Veteran-Owned-Certified.jpg" alt="SDVOSB Certified Logo">
+        <div class="footer-content">
+            <p>&copy; 2025 Concussion Firearms. All rights reserved.</p>
+            <div class="sba-logo">
+                <img src="images/Service-Disabled Veteran-Owned-Certified.jpg" alt="SBA Certification Logo">
+            </div>
         </div>
     </footer>
 </body>
