@@ -148,6 +148,72 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* Contact Page */
+.contact {
+    text-align: center; /* Center text */
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+}
+
+.contact .container {
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #007BFF; /* Accent color */
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px; /* Center the form and limit width */
+    margin: 0 auto; /* Center align the form */
+    padding: 20px;
+    background-color: #2a2a2a; /* Slightly lighter than the body */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
+}
+
+.contact form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact form input,
+.contact form textarea {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.contact form button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #0056b3;
+}
+
 /* Call to Action */
 .cta {
     background-color: #2e3d52;
