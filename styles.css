@@ -74,48 +74,15 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* About Section */
-.about {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #1e1e1e; /* Slightly lighter than the body */
-}
-
-.about h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #007BFF; /* Accent color */
-}
-
-.about p, .about ul {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* Services Section */
-.services {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #1e1e1e;
-}
-
-.services h2, .services h3 {
-    color: #007BFF;
-}
-
-.services ul li {
-    margin: 10px 0;
-}
-
-.services p {
-    margin-bottom: 20px;
-}
-
 /* Contact Page Styles */
 .contact {
     text-align: center; /* Center text on the contact page */
     padding: 40px 20px;
-    background-color: #1e1e1e; /* Match the dark theme */
+    background-color: #121212; /* Ensure dark background */
+}
+
+.contact h2, .contact h3 {
+    color: #007BFF; /* Accent color */
 }
 
 .contact ul {
@@ -130,49 +97,15 @@ nav ul li a:hover {
 }
 
 .contact iframe {
-    width: 100%;
-    height: 100vh;
+    width: 100%; /* Full width of the page */
+    height: 80vh; /* Adjust to fit most screen sizes */
     border: none;
 }
 
 .contact .form-container {
-    background-color: #222; /* Match the dark theme */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 640px;
+    background-color: transparent; /* No background, blend with the page */
+    padding: 0;
     margin: 20px auto;
-}
-
-/* Call to Action */
-.cta {
-    background-color: #2e3d52;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.cta h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.cta p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.cta-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    color: white;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
 }
 
 /* Footer Section */
@@ -198,10 +131,6 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-logo {
-        max-width: 75%;
-    }
-
     nav ul li {
         margin: 0 5px;
     }
@@ -212,9 +141,5 @@ footer p {
 
     .sba-logo img {
         max-width: 120px;
-    }
-
-    .contact .form-container {
-        padding: 15px;
     }
 }
