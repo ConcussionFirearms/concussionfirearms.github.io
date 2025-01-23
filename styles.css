@@ -24,14 +24,14 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block; /* Ensure buttons are inline and shrink */
-    margin: 0 10px; /* Reduced space between items */
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 16px; /* Adjusted font size for smaller screens */
+    font-size: 16px;
 }
 
 nav ul li a:hover {
@@ -43,27 +43,24 @@ nav ul li a:hover {
     background-color: #2e3d52; /* Dark blue tone */
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Reduced padding for less height */
+    padding: 40px 20px;
     display: flex; 
     flex-direction: column; 
-    align-items: center; /* Center content horizontally */
+    align-items: center;
 }
 
 /* Hero Logo */
-/* Default to Desktop Logo */
 .hero-logo img {
-    width: 100%; /* Full width for desktop */
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
     .hero-logo img {
-        content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Use mobile logo */
-        width: 100%; /* Adjust size for mobile */
-        margin: 0 auto;
+        content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Mobile logo */
+        width: 100%;
     }
 }
 
@@ -90,49 +87,65 @@ nav ul li a:hover {
     color: #007BFF; /* Accent color */
 }
 
-.about p {
+.about p, .about ul {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.about ul {
-    list-style-type: none;
-    margin-top: 20px;
-}
-
-.about ul li {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
 /* Services Section */
 .services {
-    text-align: center; /* Center text */
+    text-align: center;
     padding: 40px 20px;
     background-color: #1e1e1e;
 }
 
 .services h2, .services h3 {
-    color: #007BFF; /* Accent color for headings */
-}
-
-.services ul {
-    list-style-type: none;
-    margin-top: 20px;
+    color: #007BFF;
 }
 
 .services ul li {
-    font-size: 16px;
     margin: 10px 0;
 }
 
 .services p {
-    margin-bottom: 20px; /* Add space after the paragraph */
+    margin-bottom: 20px;
+}
+
+/* Contact Page Styles */
+.contact {
+    text-align: center; /* Center text on the contact page */
+    padding: 40px 20px;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.contact ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.contact iframe {
+    width: 100%;
+    height: 100vh;
+    border: none;
+}
+
+.contact .form-container {
+    background-color: #f2f2f2; /* Light gray background for Google Form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 640px; /* Limit form width */
+    margin: 20px auto; /* Center align the form */
 }
 
 /* Call to Action */
 .cta {
-    background-color: #2e3d52; /* Dark blue tone to match the hero */
+    background-color: #2e3d52;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -175,34 +188,32 @@ footer p {
     font-size: 14px;
 }
 
-/* SBA Logo in Footer */
 .sba-logo img {
-    max-width: 150px; /* Limit max width of the SBA logo */
+    max-width: 150px;
     height: auto;
-    margin-top: 10px;
+    margin: 10px auto 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-logo {
-        max-width: 75%; /* Shrink logo for mobile screens */
+        max-width: 75%;
     }
 
-    /* Adjust the size of the navigation buttons on mobile */
     nav ul li {
-        display: inline-block;
-        margin: 0 5px; /* Reduced margin for mobile screens */
+        margin: 0 5px;
     }
 
     nav ul li a {
-        font-size: 14px; /* Smaller text size for buttons */
+        font-size: 14px;
     }
 
-    /* Make the SBA logo smaller on smaller screens */
     .sba-logo img {
-        max-width: 120px; /* Resize SBA logo for mobile screens */
+        max-width: 120px;
+    }
+
+    .contact .form-container {
+        padding: 15px;
     }
 }
