@@ -12,6 +12,13 @@ body {
     line-height: 1.6;
 }
 
+/* Global Centered Container */
+.container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+}
+
 /* Header Styles */
 header {
     background-color: #222;
@@ -43,26 +50,29 @@ nav ul li a:hover {
     background-color: #2e3d52; /* Dark blue tone */
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Reduced padding for less height */
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; /* Center content horizontally */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Hero Logo */
-/* Default to Desktop Logo */
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-logo img {
-    width: 100%; /* Full width for desktop */
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* Mobile View */
 @media (max-width: 768px) {
     .hero-logo img {
         content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Use mobile logo */
-        width: 100%; /* Adjust size for mobile */
+        width: 100%;
         margin: 0 auto;
     }
 }
@@ -81,7 +91,11 @@ nav ul li a:hover {
 .about {
     text-align: center;
     padding: 40px 20px;
-    background-color: #1e1e1e; /* Slightly lighter than the body */
+    background-color: #1e1e1e;
+}
+
+.about .container {
+    text-align: center;
 }
 
 .about h2 {
@@ -107,9 +121,13 @@ nav ul li a:hover {
 
 /* Services Section */
 .services {
-    text-align: center; /* Center text */
+    text-align: center;
     padding: 40px 20px;
     background-color: #1e1e1e;
+}
+
+.services .container {
+    text-align: center;
 }
 
 .services h2, .services h3 {
@@ -127,15 +145,19 @@ nav ul li a:hover {
 }
 
 .services p {
-    margin-bottom: 20px; /* Add space after the paragraph */
+    margin-bottom: 20px;
 }
 
 /* Call to Action */
 .cta {
-    background-color: #2e3d52; /* Dark blue tone to match the hero */
+    background-color: #2e3d52;
     color: white;
     text-align: center;
     padding: 40px 20px;
+}
+
+.cta .container {
+    text-align: center;
 }
 
 .cta h2 {
@@ -170,39 +192,37 @@ footer {
     margin-top: 20px;
 }
 
+footer .container {
+    text-align: center;
+}
+
 footer p {
     margin-bottom: 10px;
     font-size: 14px;
 }
 
-/* SBA Logo in Footer */
 .sba-logo img {
-    max-width: 150px; /* Limit max width of the SBA logo */
+    max-width: 150px;
     height: auto;
-    margin-top: 10px;
+    margin: 10px auto 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-logo {
-        max-width: 75%; /* Shrink logo for mobile screens */
+        max-width: 75%;
     }
 
-    /* Adjust the size of the navigation buttons on mobile */
     nav ul li {
-        display: inline-block;
-        margin: 0 5px; /* Reduced margin for mobile screens */
+        margin: 0 5px;
     }
 
     nav ul li a {
-        font-size: 14px; /* Smaller text size for buttons */
+        font-size: 14px;
     }
 
-    /* Make the SBA logo smaller on smaller screens */
     .sba-logo img {
-        max-width: 120px; /* Resize SBA logo for mobile screens */
+        max-width: 120px;
     }
 }
