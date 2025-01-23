@@ -126,6 +126,10 @@ nav ul li a:hover {
     margin: 10px 0;
 }
 
+.services p {
+    margin-bottom: 20px; /* Add space after the paragraph */
+}
+
 /* Call to Action */
 .cta {
     background-color: #2e3d52; /* Dark blue tone to match the hero */
