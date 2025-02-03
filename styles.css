@@ -7,7 +7,7 @@
 
 /* Accessibility Improvements - Focus Styles */
 :focus {
-    outline: 3px solid #007BFF; /* Blue outline for focusable elements */
+    outline: 3px solid #FF3333; /* Red outline for focusable elements */
     outline-offset: 2px;
 }
 
@@ -16,14 +16,14 @@
 }
 
 button:focus, input:focus, a:focus {
-    border-color: #007BFF; /* Add focus style for buttons, inputs, and links */
+    border-color: #FF3333; /* Add focus style for buttons, inputs, and links */
 }
 
 /* General Body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background for dark mode */
-    color: #f4f4f4;
+    background-color: #000000; /* Black background */
+    color: #F0F0F0; /* White text */
     line-height: 1.6;
 }
 
@@ -52,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #f4f4f4;
+    color: #F0F0F0;
     text-decoration: none;
     font-size: 16px; /* Adjusted font size for smaller screens */
 }
@@ -61,7 +61,7 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus {
     text-decoration: underline;
-    color: #007BFF; /* Accent color for focus and hover */
+    color: #FF3333; /* Accent color for focus and hover */
 }
 
 /* Hero Section */
@@ -120,7 +120,7 @@ nav ul li a:focus {
 .about h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #007BFF; /* Accent color */
+    color: #FF3333; /* Red Accent */
 }
 
 .about p {
@@ -150,7 +150,7 @@ nav ul li a:focus {
 }
 
 .services h2, .services h3 {
-    color: #007BFF; /* Accent color for headings */
+    color: #FF3333; /* Red Accent for headings */
 }
 
 .services ul {
@@ -199,7 +199,7 @@ nav ul li a:focus {
 .contact h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #007BFF; /* Accent color */
+    color: #FF3333; /* Red Accent */
 }
 
 .contact p {
@@ -237,11 +237,11 @@ nav ul li a:focus {
 .contact form input,
 .contact form textarea {
     background-color: #333;
-    color: #f4f4f4;
+    color: #F0F0F0;
 }
 
 .contact form button {
-    background-color: #007BFF;
+    background-color: #FF3333; /* Red Button */
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -249,7 +249,7 @@ nav ul li a:focus {
 }
 
 .contact form button:hover {
-    background-color: #0056b3;
+    background-color: #CC2929; /* Darker red on hover */
 }
 
 /* Contact Page Unordered List Styles */
@@ -286,13 +286,13 @@ nav ul li a:focus {
     font-size: 16px;
     padding: 10px 20px;
     color: white;
-    background-color: #004085; /* Darker blue for better contrast */
+    background-color: #FF3333; /* Red for Call to Action */
     text-decoration: none;
     border-radius: 5px;
 }
 
 .cta-button:hover {
-    background-color: #003366; /* Even darker blue for hover effect */
+    background-color: #CC2929; /* Darker red for hover effect */
 }
 
 /* Footer Section */
