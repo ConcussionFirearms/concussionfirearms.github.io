@@ -17,27 +17,27 @@
 </head>
 
 <body>
-    <header>
-        <nav>
+    <header role="banner">
+        <nav role="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" aria-label="Home Page">Home</a></li>
+                <li><a href="about.html" aria-label="About Us">About</a></li>
+                <li><a href="services.html" aria-label="Explore Our Services">Services</a></li>
+                <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" role="region" aria-label="Hero Section">
         <div class="hero-logo">
             <img src="images/Concussion Firearms Web.jpg" alt="Concussion Firearms Logo" class="logo">
         </div>
-        <h1>Concussion Firearms</h1>
+        <h1>Your Trusted Veteran-Owned and Locally Rooted Firearms Business</h1>
         <p>Your Trusted Veteran-Owned and Locally Rooted Firearms Business</p>
     </section>
 
-    <section class="about">
-        <h2>Why Choose Us?</h2>
+    <section class="about" role="region" aria-labelledby="about-us">
+        <h2 id="about-us">Why Choose Us?</h2>
         <p>At Concussion Firearms, we proudly stand as a veteran-owned and locally rooted business committed to providing high-quality firearms and excellent customer service. We specialize in firearms sales, transfers, and orders at unbeatable prices.</p>
         <ul>
             <li><strong>Veteran Owned</strong> - Connecting with and supporting our fellow veterans.</li>
@@ -47,14 +47,17 @@
         </ul>
     </section>
 
-    <section class="cta">
-        <h2>Explore Our Services</h2>
+    <section class="cta" role="region" aria-labelledby="explore-services">
+        <h2 id="explore-services">Explore Our Services</h2>
         <p>Whether you're purchasing, transferring, or ordering, we ensure a smooth and affordable experience every time. Let us help you find the perfect firearm!</p>
-        <a href="contact.html" class="cta-button">Get in Touch</a>
+        <a href="contact.html" class="cta-button" aria-label="Get in Touch with Us">Get in Touch</a>
     </section>
 
     <!-- Footer placeholder -->
-    <footer id="footer-placeholder"></footer>
+    <footer id="footer-placeholder" role="contentinfo">
+        <p>&copy; 2025 Concussion Firearms. All rights reserved.</p>
+        <img src="images/sba-logo.jpg" alt="Service-Disabled Veteran-Owned Small Business Logo">
+    </footer>
 
     <!-- External JavaScript -->
     <script src="js/footer-loader.js"></script>
