@@ -260,6 +260,17 @@ nav ul li a:focus {
     text-align: center; /* Centers the list */
 }
 
+.contact a {
+    color: #FF3333; /* Red accent for email and phone number */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact a:hover,
+.contact a:focus {
+    text-decoration: underline; /* Underline on hover or focus */
+    color: #CC3333; /* Darker red for hover/focus */
+}
+
 /* Call to Action */
 .cta {
     background-color: #2e3d52;
