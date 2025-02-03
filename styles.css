@@ -260,6 +260,18 @@ nav ul li a:focus {
     text-align: center; /* Centers the list */
 }
 
+/* Contact Page Email & Phone Link Styles */
+.contact a {
+    color: #66B8D9; /* Lighter blue for email and phone */
+    text-decoration: underline; /* Keep underlined */
+}
+
+.contact a:hover,
+.contact a:focus {
+    color: #00A1E0; /* Accent color on hover or focus */
+    text-decoration: underline; /* Keep underlined */
+}
+
 /* Call to Action */
 .cta {
     background-color: #2e3d52;
