@@ -1,8 +1,7 @@
 name: Contact Form
 
 on:
-  workflow_dispatch: # For manual triggering (optional)
-  repository_dispatch: # Triggered by form submission
+  repository_dispatch:
 
 jobs:
   submit_form:
@@ -13,18 +12,25 @@ jobs:
 
       - name: Download Email Template
         uses: actions/download-artifact@v3
+        id: download_email_template
         with:
-          name: email-template # Must match the artifact name in upload-email-template.yml
-          path: email_template.html # Path where the artifact will be downloaded
+          name: email-template
+          path: email_template.html
+
+      - name: Read Email Template Content  # New step to read the file
+        id: read_email_template
+        uses: actions/read-file@v1
+        with:
+          path: email_template.html
 
       - name: Send Email
         uses: actions/sendgrid-action@v1
         with:
           sendgrid_api_key: ${{ secrets.SENDGRID_API_KEY }}
           to: ConcussionFirearms@outlook.com
-          from: noreply@concussionfirearms.github.io # Or your custom domain
+          from: noreply@concussionfirearms.github.io
           subject: New Contact Form Submission
           html: |
-            ${{ steps.download_email_template.outputs.email_template }}  <p>Name: ${{ github.event.inputs.name }}</p>
+            ${{ steps.read_email_template.outputs.content }} <p>Name: ${{ github.event.inputs.name }}</p>
             <p>Email: ${{ github.event.inputs.email }}</p>
             <p>Message: ${{ github.event.inputs.message }}</p>
