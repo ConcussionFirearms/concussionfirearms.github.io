@@ -326,17 +326,16 @@ footer p {
 }
 
 .sba-logo img {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
-    margin: 10px auto 0;
     display: block;
+    margin: 10px auto 0;
 }
 
-/* Footer Image Adjustment for Impact Guns Banner */
 .recommended-partners img {
-    width: 100%;
-    max-width: 468px; /* Max width for large screens */
+    max-width: 468px;
     height: auto;
+    display: block;
     margin: 0 auto;
 }
 
@@ -355,12 +354,11 @@ footer p {
     }
 
     .sba-logo img {
-        max-width: 120px;
+        max-width: 150px;
     }
 
     /* Adjust Impact Guns banner for mobile */
     .recommended-partners img {
-        width: 100%;
-        max-width: 300px; /* Reduce max width for smaller screens */
+        max-width: 300px;
     }
 }
