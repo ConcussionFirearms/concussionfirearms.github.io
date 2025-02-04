@@ -1,32 +1,30 @@
 name: Contact Form
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
+  workflow_dispatch: # For manual triggering (optional)
+  repository_dispatch: # Triggered by form submission
 
 jobs:
   submit_form:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Read Email Template
-        id: read_template
+      - name: Download Email Template
         uses: actions/download-artifact@v3
         with:
-          name: email-template
-          path: email_template.html
+          name: email-template # Must match the artifact name in upload-email-template.yml
+          path: email_template.html # Path where the artifact will be downloaded
 
       - name: Send Email
         uses: actions/sendgrid-action@v1
         with:
           sendgrid_api_key: ${{ secrets.SENDGRID_API_KEY }}
           to: ConcussionFirearms@outlook.com
-          from: noreply@concussionfirearms.github.io # Or custom domain
+          from: noreply@concussionfirearms.github.io # Or your custom domain
           subject: New Contact Form Submission
           html: |
-            ${{ steps.read_template.outputs.email_template }}
-            <p>Name: ${{ github.event.inputs.name }}</p>
+            ${{ steps.download_email_template.outputs.email_template }}  <p>Name: ${{ github.event.inputs.name }}</p>
             <p>Email: ${{ github.event.inputs.email }}</p>
             <p>Message: ${{ github.event.inputs.message }}</p>
