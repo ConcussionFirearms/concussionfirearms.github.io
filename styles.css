@@ -93,10 +93,6 @@ nav ul li a:focus {
     .hero-logo {
         max-width: 75%;
     }
-    .hero-logo img {
-        max-width: 100%; /* Or adjust as needed for mobile */
-        height: auto;
-    }
 }
 
 .hero h1 {
@@ -346,10 +342,6 @@ footer p {
 @media (max-width: 768px) {
     .hero-logo {
         max-width: 75%;
-    }
-        .hero-logo img {
-        max-width: 100%;
-        height: auto;
     }
 
     nav ul li {
