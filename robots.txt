@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://concussionfirearms.github.io/sitemap.xml
