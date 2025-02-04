@@ -22,8 +22,8 @@ jobs:
         uses: actions/sendgrid-action@v1
         with:
           sendgrid_api_key: ${{ secrets.SENDGRID_API_KEY }}
-          to: your_email@example.com
-          from: noreply@your-github-username.github.io # Or custom domain
+          to: ConcussionFirearms@outlook.com
+          from: noreply@concussionfirearms.github.io # Or custom domain
           subject: New Contact Form Submission
           html: |
             ${{ steps.read_template.outputs.email_template }}
