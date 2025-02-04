@@ -1,0 +1,24 @@
+name: Contact Form
+
+on:
+  workflow_dispatch: # Allow manual triggering of the workflow
+  repository_dispatch: # For form submission
+
+jobs:
+  submit_form:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Send Email (Example)
+        uses: actions/sendgrid-action@v1 # Or your preferred email action
+        with:
+          sendgrid_api_key: ${{ secrets.SENDGRID_API_KEY }}
+          to: ConcussionFirearms.outlook.com  # Replace with your email
+          from: noreply@concussionfirearms.github.io # Or custom domain
+          subject: New Contact Form Submission
+          html: |
+            <p>Name: ${{ github.event.inputs.name }}</p>
+            <p>Email: ${{ github.event.inputs.email }}</p>
+            <p>Message: ${{ github.event.inputs.message }}</p>
