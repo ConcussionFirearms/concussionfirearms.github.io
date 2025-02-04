@@ -318,6 +318,10 @@ footer p {
     font-size: 14px;
 }
 
+#footer-placeholder {
+    height: 305px; /* Or your calculated height */
+}
+
 .sba-logo img {
     max-width: 200px;
     height: auto;
