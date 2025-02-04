@@ -82,17 +82,20 @@ nav ul li a:focus {
 }
 
 .hero-logo img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
 @media (max-width: 768px) {
+    .hero-logo {
+        max-width: 75%;
+    }
     .hero-logo img {
-        content: url('images/Concussion_Firearms_Mobile.jpeg'); /* Use mobile logo */
-        width: 100%;
-        margin: 0 auto;
+        max-width: 100%; /* Or adjust as needed for mobile */
+        height: auto;
     }
 }
 
@@ -343,6 +346,10 @@ footer p {
 @media (max-width: 768px) {
     .hero-logo {
         max-width: 75%;
+    }
+        .hero-logo img {
+        max-width: 100%;
+        height: auto;
     }
 
     nav ul li {
