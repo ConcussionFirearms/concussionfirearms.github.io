@@ -1,0 +1,19 @@
+name: Upload Email Template
+
+on:
+  push:
+    branches:
+      - main # Or your main branch
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: email-template  # The name of the artifact
+          path: email_template.html # The path to the file in your repository
