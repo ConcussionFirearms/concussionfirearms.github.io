@@ -66,7 +66,7 @@ nav ul li a:focus {
 
 /* Hero Section */
 .hero {
-    background-color: #2e3d52; /* Dark blue tone */
+    background-color: #2e3d52;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -87,12 +87,6 @@ nav ul li a:focus {
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .hero-logo {
-        max-width: 75%;
-    }
 }
 
 .hero h1 {
@@ -356,7 +350,6 @@ footer p {
         max-width: 150px;
     }
 
-    /* Adjust Impact Guns banner for mobile */
     .recommended-partners img {
         max-width: 300px;
     }
