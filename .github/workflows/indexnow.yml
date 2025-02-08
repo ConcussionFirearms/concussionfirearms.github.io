@@ -14,14 +14,14 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Fetch the entire commit history
+          fetch-depth: 0
 
       - name: Submit URLs to IndexNow
         env:
           API_KEY: ${{ secrets.INDEXNOW_API_KEY }}
         run: |
           BASE_URL="https://concussionfirearms.github.io"
-          
+
           # Handle no previous commit case
           if [ $(git rev-list --count HEAD) -eq 1 ]; then
             echo "Only one commit found. Submitting all URLs."
@@ -35,8 +35,10 @@ jobs:
             exit 0
           fi
 
+          echo "Using API key starting with: ${API_KEY:0:4}..."
+
           for file in $UPDATED_FILES; do
             URL="$BASE_URL/$file"
             echo "Submitting URL: $URL"
-            curl -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL"
+            curl -v -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL"
           done
