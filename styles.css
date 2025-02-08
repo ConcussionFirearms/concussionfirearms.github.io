@@ -27,6 +27,49 @@ body {
     line-height: 1.6;
 }
 
+/* Forced Colors Mode (for high contrast settings) */
+@media (forced-colors: active) {
+    body {
+        background-color: canvas; /* Respect system forced colors */
+        color: canvasText; /* Use system default text color */
+    }
+
+    .hero,
+    .cta {
+        background-color: canvas;
+        color: canvasText;
+    }
+
+    .cta-button,
+    .contact form button {
+        background-color: highlight;
+        color: highlightText;
+    }
+
+    nav ul li a,
+    .about h2,
+    .services h2,
+    .contact h2 {
+        color: highlight;
+    }
+
+    /* Other forced-color styles */
+    .contact form input,
+    .contact form textarea {
+        background-color: buttonFace;
+        color: buttonText;
+    }
+
+    .contact a {
+        color: link;
+    }
+
+    .contact a:hover,
+    .contact a:focus {
+        color: linkHover;
+    }
+}
+
 /* Global Centered Container */
 .container {
     max-width: 1200px; /* Limit content width */
