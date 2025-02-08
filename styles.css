@@ -153,6 +153,12 @@ nav ul li a:focus {
     text-align: center;
 }
 
+.about h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00A1E0; /* Accent color */
+}
+
 .about h2 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -185,7 +191,7 @@ nav ul li a:focus {
     text-align: center;
 }
 
-.services h2, .services h3 {
+.services h1, .services h2, .services h3 {
     color: #00A1E0; /* Accent color for headings */
 }
 
