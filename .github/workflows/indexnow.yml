@@ -21,7 +21,9 @@ jobs:
           API_KEY: ${{ secrets.INDEXNOW_API_KEY }}
         run: |
           BASE_URL="https://concussionfirearms.github.io"
-
+          HOST="concussionfirearms.github.io"
+          KEY="${{ secrets.INDEXNOW_API_KEY }}"
+          
           # Handle no previous commit case
           if [ $(git rev-list --count HEAD) -eq 1 ]; then
             echo "Only one commit found. Submitting all URLs."
@@ -35,25 +37,40 @@ jobs:
             exit 0
           fi
 
-          echo "Using API key starting with: ${API_KEY:0:4}..."
+          echo "Using API key starting with: ${KEY:0:4}..."
 
-          # Submit each updated file
+          # Prepare URL list
+          URL_LIST=""
           for file in $UPDATED_FILES; do
             URL="$BASE_URL/$file"
-            echo "Submitting URL: $URL"
-            
-            # Make the request to IndexNow and capture response
-            RESPONSE=$(curl -s -w "%{http_code}" -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL" -o response.txt)
-
-            # Capture the response code
-            HTTP_CODE=$(tail -n 1 <<< "$RESPONSE")
-
-            # Check if the submission was successful (200 OK)
-            if [ "$HTTP_CODE" -eq 200 ]; then
-              echo "URL submitted successfully: $URL"
-            else
-              echo "Error submitting URL: $URL"
-              echo "HTTP Code: $HTTP_CODE"
-              echo "Response: $(cat response.txt)"
-            fi
+            URL_LIST="$URL_LIST\"$URL\", "
           done
+
+          # Remove last comma and space
+          URL_LIST=$(echo $URL_LIST | sed 's/, $//')
+
+          # JSON payload
+          PAYLOAD=$(cat <<EOF
+{
+  "host": "$HOST",
+  "key": "$KEY",
+  "keyLocation": "https://$HOST/$KEY.txt",
+  "urlList": [$URL_LIST]
+}
+EOF
+)
+
+          # Make the request to IndexNow
+          RESPONSE=$(curl -s -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json" -d "$PAYLOAD" -o response.txt)
+
+          # Capture the response code
+          HTTP_CODE=$(tail -n 1 <<< "$RESPONSE")
+
+          # Check if the submission was successful (200 OK)
+          if [ "$HTTP_CODE" -eq 200 ]; then
+            echo "URLs submitted successfully"
+          else
+            echo "Error submitting URLs"
+            echo "HTTP Code: $HTTP_CODE"
+            echo "Response: $(cat response.txt)"
+          fi
