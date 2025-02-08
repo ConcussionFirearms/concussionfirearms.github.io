@@ -14,14 +14,21 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2  # Fetch the last two commits for git diff to work
+          fetch-depth: 0  # Fetch the entire commit history
 
       - name: Submit URLs to IndexNow
         env:
           API_KEY: ${{ secrets.INDEXNOW_API_KEY }}
         run: |
           BASE_URL="https://concussionfirearms.github.io"
-          UPDATED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html')
+          
+          # Handle no previous commit case
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "Only one commit found. Submitting all URLs."
+            UPDATED_FILES=$(find . -type f -name '*.html' | sed 's|^./||')
+          else
+            UPDATED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html')
+          fi
 
           if [ -z "$UPDATED_FILES" ]; then
             echo "No HTML files updated. Skipping submission."
@@ -32,3 +39,4 @@ jobs:
             URL="$BASE_URL/$file"
             echo "Submitting URL: $URL"
             curl -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL"
+          done
