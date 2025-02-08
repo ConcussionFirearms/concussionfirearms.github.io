@@ -27,7 +27,7 @@ jobs:
             echo "Only one commit found. Submitting all URLs."
             UPDATED_FILES=$(find . -type f -name '*.html' | sed 's|^./||')
           else
-            UPDATED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html')
+            UPDATED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html') || true
           fi
 
           if [ -z "$UPDATED_FILES" ]; then
@@ -37,8 +37,23 @@ jobs:
 
           echo "Using API key starting with: ${API_KEY:0:4}..."
 
+          # Submit each updated file
           for file in $UPDATED_FILES; do
             URL="$BASE_URL/$file"
             echo "Submitting URL: $URL"
-            curl -v -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL"
+            
+            # Make the request to IndexNow and capture response
+            RESPONSE=$(curl -s -w "%{http_code}" -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL" -o response.txt)
+
+            # Capture the response code
+            HTTP_CODE=$(tail -n 1 <<< "$RESPONSE")
+
+            # Check if the submission was successful (200 OK)
+            if [ "$HTTP_CODE" -eq 200 ]; then
+              echo "URL submitted successfully: $URL"
+            else
+              echo "Error submitting URL: $URL"
+              echo "HTTP Code: $HTTP_CODE"
+              echo "Response: $(cat response.txt)"
+            fi
           done
