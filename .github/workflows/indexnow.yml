@@ -46,8 +46,8 @@ jobs:
           
           # Remove last comma and space
           URL_LIST=$(echo $URL_LIST | sed 's/, $//')
-          
-          # JSON payload
+
+          # Construct JSON payload with proper variable substitution
           PAYLOAD=$(cat <<EOF
 {
   "host": "$HOST",
