@@ -31,24 +31,22 @@ jobs:
           else
             UPDATED_FILES=$(git diff --name-only HEAD^ HEAD | grep '\.html') || true
           fi
-
           if [ -z "$UPDATED_FILES" ]; then
             echo "No HTML files updated. Skipping submission."
             exit 0
           fi
-
           echo "Using API key starting with: ${KEY:0:4}..."
-
+          
           # Prepare URL list
           URL_LIST=""
           for file in $UPDATED_FILES; do
             URL="$BASE_URL/$file"
             URL_LIST="$URL_LIST\"$URL\", "
           done
-
+          
           # Remove last comma and space
           URL_LIST=$(echo $URL_LIST | sed 's/, $//')
-
+          
           # JSON payload
           PAYLOAD=$(cat <<EOF
 {
