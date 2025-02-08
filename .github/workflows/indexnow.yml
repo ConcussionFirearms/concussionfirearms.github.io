@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2  # Fetch the last two commits for git diff to work
 
       - name: Submit URLs to IndexNow
         env:
@@ -30,4 +32,3 @@ jobs:
             URL="$BASE_URL/$file"
             echo "Submitting URL: $URL"
             curl -X POST "https://www.bing.com/indexnow?key=$API_KEY&url=$URL"
-          done
