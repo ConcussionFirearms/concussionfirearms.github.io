@@ -48,20 +48,12 @@ jobs:
             URL_LIST="$URL_LIST\"$URL\", "
           done
           
-          # Remove last comma and space
-          URL_LIST=$(echo $URL_LIST | sed 's/, $//')
+          # Remove the last comma and space from the URL list
+          URL_LIST=$(echo "$URL_LIST" | sed 's/, $//')
           
-          # JSON payload
-          PAYLOAD=$(cat <<EOF
-{
-  "host": "$HOST",
-  "key": "$KEY",
-  "keyLocation": "https://$HOST/$KEY.txt",
-  "urlList": [$URL_LIST]
-}
-EOF
-)
-
+          # Manually construct the JSON payload
+          PAYLOAD="{\"host\":\"$HOST\",\"key\":\"$KEY\",\"keyLocation\":\"https://$HOST/$KEY.txt\",\"urlList\":[$URL_LIST]}"
+          
           # Make the request to IndexNow
           RESPONSE=$(curl -s -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json" -d "$PAYLOAD" -o response.txt)
 
