@@ -204,7 +204,7 @@ nav ul li a:focus {
     max-width: 600px; /* Center the form and limit width */
     margin: 0 auto; /* Center align the form */
     padding: 20px;
-    background-color: #2a2a2a; /* Slightly lighter than the body */
+    background-color: #2a2a2a;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
 }
