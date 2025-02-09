@@ -1,4 +1,4 @@
-/* Footer Styles */
+/* Footer Section */
 footer {
     background-color: #222;
     color: white;
@@ -9,50 +9,39 @@ footer {
 
 footer .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 10px;
     text-align: center;
 }
 
-/* Ensure both logos are centered and properly sized */
-footer .sba-logo, footer .impact-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 200px; /* Control the size for desktop */
-    width: 100%;
-    height: auto;
-}
-
-/* Impact Guns Banner Styling */
-.impact-banner img {
-    max-width: 250px; /* Limit the size on larger screens */
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-
-/* SBA Logo Scaling */
+/* SBA Logo */
 .sba-logo img {
-    max-width: 200px; /* Control size */
-    width: 100%;
+    max-width: 200px;
     height: auto;
-    margin-top: 10px;
+    display: block;
+    margin: 10px auto 0;
 }
 
-/* Media Query for Mobile Optimization */
+/* Impact Guns Banner */
+.recommended-partners img {
+    max-width: 468px; /* Ensure Impact Guns logo does not get too large */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     footer {
         padding: 15px;
     }
 
-    footer p {
-        font-size: 12px;
+    .sba-logo img {
+        max-width: 150px; /* Smaller logo for mobile */
     }
 
-    footer .sba-logo img, footer .impact-banner img {
-        max-width: 150px; /* Smaller logos on mobile */
+    .recommended-partners img {
+        max-width: 300px; /* Adjust Impact Guns logo for smaller screens */
     }
 }
