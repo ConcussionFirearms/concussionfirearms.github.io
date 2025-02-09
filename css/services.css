@@ -1,1 +1,134 @@
- 
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Accessibility Improvements - Focus Styles */
+:focus {
+    outline: 3px solid #00A1E0; /* Blue outline for focusable elements */
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none; /* Remove focus outline for mouse users */
+}
+
+button:focus, input:focus, a:focus {
+    border-color: #00A1E0; /* Add focus style for buttons, inputs, and links */
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #F0F0F0; /* White primary text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Inline navigation items */
+    margin: 0 10px; /* Space between items */
+}
+
+nav ul li a {
+    color: #F0F0F0;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover and Focus for Navigation Links */
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: underline;
+    color: #00A1E0; /* Accent color for hover and focus */
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    background-color: #1e1e1e; /* Dark background for services section */
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00A1E0; /* Accent color for the main heading */
+}
+
+.services h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #00A1E0; /* Accent color for subheadings */
+}
+
+.services p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #222;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta h2 {
+    font-size: 28px;
+    color: #00A1E0; /* Accent color for CTA heading */
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #00A1E0; /* CTA button color */
+    color: #F0F0F0; /* Button text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #087099; /* Darker shade of blue for hover/focus */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
