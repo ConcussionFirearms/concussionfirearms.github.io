@@ -111,6 +111,21 @@ iframe {
     border: none;
 }
 
+iframe {
+    width: 100%; /* Make the iframe take full container width */
+    min-height: 500px; /* Set a minimum height to ensure visibility */
+    border: none; /* Remove border around iframe */
+    overflow: auto; /* Allow for scrolling inside the iframe if needed */
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 800px; /* You can adjust this to your preference */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+}
+
+
 /* Footer Styles */
 footer {
     background-color: #222;
