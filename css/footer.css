@@ -8,6 +8,11 @@ footer {
 }
 
 footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     text-align: center;
 }
 
@@ -16,10 +21,37 @@ footer p {
     font-size: 14px;
 }
 
-/* SBA logo scaling */
+/* SBA Logo Scaling */
 .sba-logo img {
-    max-width: 200px;  /* Scale the logo */
-    width: 100%;  /* Ensure it resizes for smaller screens */
+    max-width: 200px;  /* Maintain max width for larger screens */
+    width: 100%;  /* Responsive resizing */
     height: auto;
     margin-top: 10px;
+}
+
+/* Impact Guns Banner Styling */
+.impact-banner img {
+    max-width: 300px; /* Limit the size on larger screens */
+    width: 100%; /* Responsive scaling */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Media Query for Mobile Optimization */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .sba-logo img {
+        max-width: 150px; /* Smaller on mobile */
+    }
+
+    .impact-banner img {
+        max-width: 200px; /* Smaller banner on mobile */
+    }
 }
