@@ -121,19 +121,20 @@ nav ul li a:focus {
 .form-container {
     margin-top: 20px;
     width: 100%;
-    max-width: 800px; /* Adjust max-width if needed */
-    margin: 0 auto; /* Center the form */
-    padding: 0; /* Remove padding if necessary */
-    overflow: hidden; /* Hide any potential overflow */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    height: 1000px; /* Increase height to remove scrollbar */
 }
 
 /* Styling for the iframe */
 iframe {
-    width: 100%; /* Make the iframe take full container width */
-    height: 600px; /* Adjust the height to fit the contact form */
-    min-height: 500px; /* Set a minimum height to ensure visibility */
-    border: none; /* Remove border around iframe */
-    display: block; /* Ensure it behaves as a block element */
+    width: 100%;
+    height: 900px; /* Match the form container height */
+    min-height: 600px;
+    border: none;
+    display: block;
 }
 
 /* Ensure iframe stays within its container */
