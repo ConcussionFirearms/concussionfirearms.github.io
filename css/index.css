@@ -104,6 +104,8 @@ nav ul li a:focus {
     text-align: center;
     padding: 40px 20px;
     background-color: #1e1e1e;
+    transition: min-height 0.3s ease-out;
+    min-height: 300px;
 }
 
 .about .container {
