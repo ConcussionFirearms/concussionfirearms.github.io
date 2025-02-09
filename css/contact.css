@@ -100,12 +100,10 @@ nav ul li a:focus {
     text-decoration: none;
 }
 
-.contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100px; /* Adjust if needed */
+.contact-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .contact-info {
