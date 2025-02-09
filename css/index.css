@@ -72,7 +72,9 @@ nav ul li a:focus {
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .hero .container {
@@ -81,10 +83,17 @@ nav ul li a:focus {
     align-items: center;
 }
 
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
 .hero-logo img {
     width: auto;
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
