@@ -31,6 +31,14 @@ footer .container {
     margin: 0 auto;
 }
 
+/* Horizontal Line */
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #fff; /* White horizontal line */
+    margin: 20px 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     footer {
