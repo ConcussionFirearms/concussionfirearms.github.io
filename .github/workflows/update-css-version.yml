@@ -1,0 +1,27 @@
+name: Auto-Version CSS
+on:
+  push:
+    paths:
+      - 'styles.css'  # Only runs when styles.css is modified
+  workflow_dispatch:  # Allows you to trigger this workflow manually if needed
+
+jobs:
+  update-css-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Update CSS Version
+        run: |
+          TIMESTAMP=$(date +%s)  # Get the current timestamp as version
+          # Update all HTML files where styles.css is referenced
+          sed -i "s|styles.css?v=[0-9]*|styles.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html about.html services.html contact.html
+          git commit -m "Auto-update CSS version to prevent caching"
+          git push
