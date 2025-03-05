@@ -2,7 +2,8 @@ name: Auto-Version CSS
 on:
   push:
     paths:
-      - 'styles.css'  # Only runs when styles.css is modified
+      - 'styles.css'
+      - 'css/*.css'  # Watches all CSS files in the css folder
   workflow_dispatch:  # Allows you to trigger this workflow manually if needed
 
 jobs:
@@ -15,13 +16,18 @@ jobs:
       - name: Update CSS Version
         run: |
           TIMESTAMP=$(date +%s)  # Get the current timestamp as version
-          # Update all HTML files where styles.css is referenced
+          # Update all HTML files where CSS files are referenced
           sed -i "s|styles.css?v=[0-9]*|styles.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+          sed -i "s|css/about.css?v=[0-9]*|css/about.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+          sed -i "s|css/contact.css?v=[0-9]*|css/contact.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+          sed -i "s|css/footer.css?v=[0-9]*|css/footer.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+          sed -i "s|css/index.css?v=[0-9]*|css/index.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+          sed -i "s|css/services.css?v=[0-9]*|css/services.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
 
       - name: Commit Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html about.html services.html contact.html
-          git commit -m "Auto-update CSS version to prevent caching"
+          git commit -m "Auto-update CSS versions to prevent caching"
           git push
