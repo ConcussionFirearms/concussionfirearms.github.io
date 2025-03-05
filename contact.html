@@ -75,34 +75,41 @@
 
     <!-- Handle form submission -->
     <script>
-        document.getElementById('contact-form').addEventListener('submit', async function(event) {
-            event.preventDefault();
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
-            // Send form data to Netlify function
-            const response = await fetch('/.netlify/functions/contactForm', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, name, message }),
-            });
+    const feedbackDiv = document.getElementById('form-feedback');
 
-            const result = await response.json();
-            const feedbackDiv = document.getElementById('form-feedback');
-
-            if (response.status === 200) {
-                feedbackDiv.textContent = result.message;
-                feedbackDiv.style.color = 'green';
-            } else {
-                feedbackDiv.textContent = result.message;
-                feedbackDiv.style.color = 'red';
-            }
+    try {
+        // Send form data to Netlify function
+        const response = await fetch('/.netlify/functions/contactForm', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, name, message }),
         });
+
+        const result = await response.json();
+
+        if (response.status === 200) {
+            feedbackDiv.textContent = result.message;
+            feedbackDiv.style.color = 'green';
+        } else {
+            feedbackDiv.textContent = result.message;
+            feedbackDiv.style.color = 'red';
+        }
+    } catch (error) {
+        // Catch any errors and display feedback
+        feedbackDiv.textContent = 'There was an error submitting the form. Please try again later.';
+        feedbackDiv.style.color = 'red';
+    }
+});
     </script>
 </body>
 </html>
