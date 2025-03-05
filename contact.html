@@ -51,19 +51,19 @@
         <h3>Get in Touch</h3>
         <p>Feel free to reach out using the contact methods above, or use the form below to send us a message. We aim to respond to all inquiries promptly.</p>
 
-        <!-- New contact form -->
-<form id="contact-form" method="POST" action="/.netlify/functions/contactForm">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" name="name" required placeholder="Enter your name">
+        <!-- Updated contact form without action and method -->
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
 
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
 
-    <label for="message">Your Message:</label>
-    <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
 
-    <button type="submit">Send Message</button>
-</form>
+            <button type="submit">Send Message</button>
+        </form>
 
         <div id="form-feedback"></div>
 
