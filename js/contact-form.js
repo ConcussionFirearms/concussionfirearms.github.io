@@ -12,7 +12,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 
     try {
         // Send form data to Netlify function
-        const response = await fetch('/.netlify/functions/contactForm', {
+        const response = await fetch('https://concussionfirearms.netlify.app/.netlify/functions/contactForm', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
