@@ -1,6 +1,19 @@
 const nodemailer = require("nodemailer");
 
 exports.handler = async (event, context) => {
+  // Handle preflight OPTIONS request
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      body: '',
+      headers: {
+        'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',  // Allow POST and OPTIONS methods
+        'Access-Control-Allow-Headers': 'Content-Type',  // Allow Content-Type header
+      },
+    };
+  }
+
   // Ensure only POST requests are handled
   if (event.httpMethod !== 'POST') {
     return {
@@ -47,8 +60,8 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ message: 'Message sent successfully!' }),
       headers: {
         'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
-        'Access-Control-Allow-Methods': 'POST',  // Allow POST requests
-        'Access-Control-Allow-Headers': 'Content-Type',  // Allow Content-Type header
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',  // Allow POST and OPTIONS methods
+        'Access-Control-Allow-Headers': 'Content-Type',
       },
     };
   } catch (error) {
@@ -58,7 +71,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ message: 'Failed to send message', error: error.message }),
       headers: {
         'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
-        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
     };
