@@ -1,13 +1,16 @@
 const nodemailer = require("nodemailer");
 
 exports.handler = async (event, context) => {
+  // Log the incoming request for debugging
+  console.log('Received event:', event);
+
   // Handle preflight OPTIONS request
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
       body: '',
       headers: {
-        'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
+        'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io',  // Allow GitHub Pages origin
         'Access-Control-Allow-Methods': 'POST, OPTIONS',  // Allow POST and OPTIONS methods
         'Access-Control-Allow-Headers': 'Content-Type',  // Allow Content-Type header
       },
@@ -19,6 +22,11 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 405,  // Method Not Allowed
       body: JSON.stringify({ message: 'Method Not Allowed' }),
+      headers: {
+        'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io',  // Allow GitHub Pages origin
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
     };
   }
 
@@ -30,6 +38,11 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 400,  // Bad Request
       body: JSON.stringify({ message: 'All fields are required.' }),
+      headers: {
+        'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io',  // Allow GitHub Pages origin
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
     };
   }
 
@@ -59,18 +72,18 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: JSON.stringify({ message: 'Message sent successfully!' }),
       headers: {
-        'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',  // Allow POST and OPTIONS methods
+        'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io',  // Allow GitHub Pages origin
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
     };
   } catch (error) {
-    // Return error response if something goes wrong with CORS headers
+    // Return error response with CORS headers
     return {
       statusCode: 500,  // Internal Server Error
       body: JSON.stringify({ message: 'Failed to send message', error: error.message }),
       headers: {
-        'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
+        'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io',  // Allow GitHub Pages origin
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
