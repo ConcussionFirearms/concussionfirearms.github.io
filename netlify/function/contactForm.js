@@ -41,16 +41,26 @@ exports.handler = async (event, context) => {
     // Send the email
     await transporter.sendMail(mailOptions);
 
-    // Return success response
+    // Return success response with CORS headers
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Message sent successfully!' }),
+      headers: {
+        'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
+        'Access-Control-Allow-Methods': 'POST',  // Allow POST requests
+        'Access-Control-Allow-Headers': 'Content-Type',  // Allow Content-Type header
+      },
     };
   } catch (error) {
-    // Return error response if something goes wrong
+    // Return error response if something goes wrong with CORS headers
     return {
       statusCode: 500,  // Internal Server Error
       body: JSON.stringify({ message: 'Failed to send message', error: error.message }),
+      headers: {
+        'Access-Control-Allow-Origin': '*',  // Allow all origins (or specify your GitHub domain)
+        'Access-Control-Allow-Methods': 'POST',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
     };
   }
 };
