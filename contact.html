@@ -8,7 +8,7 @@
     <meta name="google-site-verification" content="f1BJdc3RuvuyAzt2Nj7TgNMhVfNd5n_ubKDksXBQkG4" />
 
     <!-- Security Script -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://*.clarity.ms https://c.bing.com; script-src 'self' https://www.clarity.ms https://www.googletagmanager.com; connect-src 'self' https://*.clarity.ms https://www.google-analytics.com; style-src 'self'; frame-src 'self' https://docs.google.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://*.clarity.ms https://c.bing.com; script-src 'self' https://www.clarity.ms https://www.googletagmanager.com; connect-src 'self' https://*.clarity.ms https://www.google-analytics.com https://concussionfirearms.netlify.app; style-src 'self'; frame-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
@@ -39,27 +39,70 @@
         <h2>Our Contact Information</h2>
         <p>If you need assistance, don’t hesitate to reach out. You can contact us through email, phone, or by visiting us in Cheyenne, WY. We’re here to serve you and help you make informed decisions about your firearm needs.</p>
 
-<section class="contact-section">
-  <ul class="contact-info">
-      <li><strong>Email:</strong> <a href="mailto:ConcussionFirearms@outlook.com">ConcussionFirearms@outlook.com</a></li>
-      <li><strong>Phone:</strong> <a href="tel:+13073998254">(307) 399-8254</a></li>
-  </ul>
-</section>
+        <section class="contact-section">
+          <ul class="contact-info">
+              <li><strong>Email:</strong> <a href="mailto:ConcussionFirearms@outlook.com">ConcussionFirearms@outlook.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+13073998254">(307) 399-8254</a></li>
+          </ul>
+        </section>
 
         <br>
 
         <h3>Get in Touch</h3>
         <p>Feel free to reach out using the contact methods above, or use the form below to send us a message. We aim to respond to all inquiries promptly.</p>
 
-        <div class="form-container" id="google-form-container">
-        </div>
+        <!-- New contact form -->
+        <form id="contact-form">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your email" />
+            
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+            
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message" required placeholder="Your message"></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="form-feedback"></div>
 
     </section>
 
     <footer id="footer-placeholder" role="contentinfo"></footer>
 
     <script src="js/footer-loader.js"></script>
-    <script src="js/defer-google-form.js" defer></script>
 
+    <!-- Handle form submission -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            // Send form data to Netlify function
+            const response = await fetch('/.netlify/functions/contactForm', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, name, message }),
+            });
+
+            const result = await response.json();
+            const feedbackDiv = document.getElementById('form-feedback');
+
+            if (response.status === 200) {
+                feedbackDiv.textContent = result.message;
+                feedbackDiv.style.color = 'green';
+            } else {
+                feedbackDiv.textContent = result.message;
+                feedbackDiv.style.color = 'red';
+            }
+        });
+    </script>
 </body>
 </html>
