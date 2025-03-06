@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
   params.append('code', code);
   params.append('client_id', process.env.CLIENT_ID);
   params.append('client_secret', process.env.CLIENT_SECRET);
-  process.env.REDIRECT_URI = 'https://concussionfirearms.netlify.app/.netlify/functions/oauth2callback';
+  params.append('redirect_uri', process.env.REDIRECT_URI);
   params.append('grant_type', 'authorization_code');
 
   try {
