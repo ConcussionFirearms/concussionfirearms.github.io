@@ -51,30 +51,13 @@
         <h3>Get in Touch</h3>
         <p>Feel free to reach out using the contact methods above, or use the form below to send us a message. We aim to respond to all inquiries promptly.</p>
 
-        <!-- Form with hidden field for Netlify form handling -->
-        <form id="contact-form" name="contact" method="POST" data-netlify="true">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Enter your name">
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
-
-            <!-- Hidden field to prevent form submission from being processed without JS -->
-            <input type="hidden" name="form-name" value="contact" />
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div id="form-feedback"></div>  <!-- For feedback message -->
+        <!-- Embed the Netlify form in an iframe -->
+        <iframe src="https://concussionfirearms.netlify.app/contact-form.html" width="100%" height="600px" frameborder="0" title="Contact Form"></iframe>
 
     </section>
 
     <footer id="footer-placeholder" role="contentinfo"></footer>
 
-    <!-- External scripts with proper permissions according to CSP -->
     <script src="js/footer-loader.js" defer></script>
 
 </body>
