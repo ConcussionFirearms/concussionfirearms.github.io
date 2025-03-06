@@ -51,8 +51,8 @@ exports.handler = async (event, context) => {
     transporter = nodemailer.createTransport({
       service: 'gmail',  // Using Gmail's SMTP server
       auth: {
-        user: 'concussionfirearms@outlook.com',   // Your Outlook email
-        pass: 'adsz tnzq lbiu pcrx',              // Your app password for Outlook
+        user: 'concussionfirearms@outlook.com',
+        pass: 'zghkersfrrmsboid',
       },
     });
   } catch (error) {
