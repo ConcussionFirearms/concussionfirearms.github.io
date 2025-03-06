@@ -117,6 +117,7 @@ nav ul li a:focus {
   margin: 10px 0;
 }
 
+/* Container for the iframe */
 .iframe-container {
     width: 100%; /* Make sure it takes up full width */
     height: auto; /* Let the height adjust automatically */
@@ -139,15 +140,16 @@ nav ul li a:focus {
 /* Make the iframe container responsive for mobile and desktop */
 @media (max-width: 768px) {
     .iframe-container {
-        height: 400px; /* Adjust height for mobile devices */
+        height: 600px; /* Adjust height for mobile devices */
     }
 }
 
 @media (min-width: 769px) {
     .iframe-container {
-        height: 600px; /* Set a default height for larger screens */
+        height: 650px; /* Increased height for larger screens */
     }
 }
+
 
 /* Contact Form */
 #contact-form {
