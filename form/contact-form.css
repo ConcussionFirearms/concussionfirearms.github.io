@@ -1,34 +1,111 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Black background */
+    color: #F0F0F0; /* White primary text */
+    line-height: 1.6;
+    text-align: center;
     padding: 20px;
-    background-color: #f9f9f9;
 }
 
-form {
+/* Contact Form Container */
+.contact-form-container {
+    background-color: #1e1e1e; /* Dark background matching the main site */
+    padding: 30px;
+    border-radius: 10px;
     max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-input, textarea {
+/* Form Headings */
+.contact-form-container h1 {
+    font-size: 28px;
+    color: #00A1E0; /* Accent color */
+    margin-bottom: 15px;
+}
+
+.contact-form-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    font-size: 16px;
+}
+
+#contact-form input,
+#contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: #F0F0F0;
 }
 
-button {
-    background-color: #007bff;
+#contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contact-form button {
+    background-color: #4CAF50;
     color: white;
     padding: 10px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Feedback Message */
+#form-feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#form-feedback.success {
+    color: #4CAF50;
+}
+
+#form-feedback.error {
+    color: #FF6347;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .contact-form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 14px;
+    }
 }
