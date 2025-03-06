@@ -1,4 +1,5 @@
-const nodemailer = require("nodemailer");
+const { google } = require('googleapis');
+const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
   // Handle preflight OPTIONS request
@@ -48,14 +49,31 @@ exports.handler = async (event, context) => {
     };
   }
 
-  // Create the Nodemailer transporter object using Gmail's SMTP server
+  // OAuth2 Client setup with secrets from GitHub
+  const oauth2Client = new google.auth.OAuth2(
+    process.env.CLIENT_ID,      // Use GitHub secret for Client ID
+    process.env.CLIENT_SECRET,  // Use GitHub secret for Client Secret
+    process.env.REDIRECT_URI   // Use GitHub secret for Redirect URI
+  );
+
+  oauth2Client.setCredentials({
+    refresh_token: process.env.REFRESH_TOKEN,  // Use GitHub secret for Refresh Token
+  });
+
+  const accessToken = await oauth2Client.getAccessToken();
+
+  // Create Nodemailer transporter using OAuth2 authentication
   let transporter;
   try {
     transporter = nodemailer.createTransport({
-      service: 'gmail',  // Using Gmail's SMTP server
+      service: 'gmail',
       auth: {
-        user: 'concussionfirearms@outlook.com',
-        pass: 'zghkersfrrmsboid',
+        type: 'OAuth2',
+        user: 'concussionfirearms@outlook.com',  // Replace with your Gmail address
+        clientId: process.env.CLIENT_ID,         // Use GitHub secret for Client ID
+        clientSecret: process.env.CLIENT_SECRET, // Use GitHub secret for Client Secret
+        refreshToken: process.env.REFRESH_TOKEN, // Use GitHub secret for Refresh Token
+        accessToken: accessToken.token,         // OAuth2 access token
       },
     });
   } catch (error) {
@@ -70,7 +88,7 @@ exports.handler = async (event, context) => {
   // Setup the email options
   const mailOptions = {
     from: email,
-    to: 'concussionfirearms@outlook.com',
+    to: 'your-email@gmail.com',  // Replace with your Gmail address
     subject: `New contact form message from ${name}`,
     text: `You have a new message from ${name} (${email}):\n\n${message}`,
   };
