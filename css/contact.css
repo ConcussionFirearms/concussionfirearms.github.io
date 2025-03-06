@@ -140,7 +140,7 @@ nav ul li a:focus {
 /* Make the iframe container responsive for mobile and desktop */
 @media (max-width: 768px) {
     .iframe-container {
-        height: 600px; /* Adjust height for mobile devices */
+        height: 800px; /* Adjust height for mobile devices */
     }
 }
 
