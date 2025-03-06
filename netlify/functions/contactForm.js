@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: '',
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io',  // Allow only your GitHub Pages domain
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
       },
@@ -19,6 +19,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 405,
       body: JSON.stringify({ message: 'Method Not Allowed' }),
+      headers: { 'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io' }, // Ensure CORS is applied here
     };
   }
 
@@ -34,6 +35,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 400,  // Bad Request
       body: JSON.stringify({ message: 'Invalid form data.' }),
+      headers: { 'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io' },
     };
   }
 
@@ -42,6 +44,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 400,  // Bad Request
       body: JSON.stringify({ message: 'All fields are required.' }),
+      headers: { 'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io' },
     };
   }
 
@@ -60,6 +63,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 500,  // Internal Server Error
       body: JSON.stringify({ message: 'Failed to configure email transporter.' }),
+      headers: { 'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io' },
     };
   }
 
@@ -79,6 +83,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 500,  // Internal Server Error
       body: JSON.stringify({ message: 'Failed to send message', error: error.message }),
+      headers: { 'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io' },
     };
   }
 
@@ -87,7 +92,7 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     body: JSON.stringify({ message: 'Message sent successfully!' }),
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Origin': 'https://concussionfirearms.github.io', // Allow only GitHub Pages
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
     },
