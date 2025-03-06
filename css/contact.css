@@ -118,21 +118,35 @@ nav ul li a:focus {
 }
 
 .iframe-container {
-    width: 100% !important; /* Make sure it takes the full width */
-    height: 600px !important; /* Ensure a fixed height for now, adjust as needed */
-    max-width: 100% !important; /* Prevent any max-width issues */
-    max-height: none !important; /* Remove any maximum height constraint */
-    padding: 0 !important; /* Remove padding that might be limiting the size */
-    margin: 0 auto; /* Center align */
-    position: relative; /* Ensure the container stays in the flow */
-    overflow: hidden; /* Prevent overflow from causing scrollbars */
-    display: block; /* Prevent flex/grid behaviors */
+    width: 100%; /* Make sure it takes up full width */
+    height: auto; /* Let the height adjust automatically */
+    margin: 0 auto; /* Center align the container */
+    padding: 0; /* Remove any padding */
+    position: relative; /* Ensure it stays in normal document flow */
+    display: block; /* Prevent flex/grid layout from affecting it */
+    overflow: hidden; /* Prevent overflow */
 }
 
+/* Iframe itself */
 .iframe-container iframe {
-    width: 100% !important; /* Ensure iframe takes up the full width */
-    height: 100% !important; /* Ensure iframe takes up the full height of the container */
+    width: 100%; /* Ensure iframe takes up the full width of the container */
+    height: 100%; /* Make the iframe height adjust to container's height */
     border: none; /* Remove iframe borders */
+    display: block; /* Prevent any extra space around iframe */
+    max-width: 100%; /* Ensure iframe is responsive */
+}
+
+/* Make the iframe container responsive for mobile and desktop */
+@media (max-width: 768px) {
+    .iframe-container {
+        height: 400px; /* Adjust height for mobile devices */
+    }
+}
+
+@media (min-width: 769px) {
+    .iframe-container {
+        height: 600px; /* Set a default height for larger screens */
+    }
 }
 
 /* Contact Form */
