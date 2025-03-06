@@ -5,6 +5,7 @@ on:
     paths:
       - 'styles.css'
       - 'css/*.css'  # Watches all CSS files in the css folder
+      - 'form/contact-form.css'  # Watches the contact-form.css in the form folder
   workflow_dispatch:  # Allows you to trigger this workflow manually if needed
 
 jobs:
@@ -29,6 +30,7 @@ jobs:
           sed -i "s|css/footer.css?v=[0-9]*|css/footer.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
           sed -i "s|css/index.css?v=[0-9]*|css/index.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
           sed -i "s|css/services.css?v=[0-9]*|css/services.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html
+          sed -i "s|form/contact-form.css?v=[0-9]*|form/contact-form.css?v=$TIMESTAMP|g" index.html about.html services.html contact.html  # Add the contact-form.css reference
           echo "Files updated"
 
       - name: Commit Changes
