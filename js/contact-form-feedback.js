@@ -1,39 +1,31 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form[data-netlify="true"]');
     const feedbackDiv = document.getElementById('form-feedback');
-    const form = document.getElementById('contact-form');
 
-    // Optionally, clear any previous feedback
-    feedbackDiv.textContent = '';
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    // Show a loading message until form submission is complete
-    feedbackDiv.textContent = 'Sending your message...';
-    feedbackDiv.style.color = 'blue';
-
-    // Create a FormData object to send with fetch (if needed, to show loading)
-    const formData = new FormData(form);
-
-    // Manually submit the form using the fetch API
-    fetch('/', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => {
-        if (response.ok) {
-            // Show success message
-            feedbackDiv.textContent = 'Thanks for your message! We will get back to you shortly.';
-            feedbackDiv.style.color = 'green';
-            form.reset(); // Reset the form fields
-        } else {
-            // Show error message if submission failed
-            feedbackDiv.textContent = 'There was an error sending your message. Please try again later.';
+        const formData = new FormData(form);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+        .then(response => {
+            if (response.ok) {
+                // Success message
+                feedbackDiv.textContent = 'Thanks for your message! We will get back to you shortly.';
+                feedbackDiv.style.color = 'green';
+                form.reset(); // Reset the form fields
+            } else {
+                // Error message
+                feedbackDiv.textContent = 'There was an error sending your message. Please try again later.';
+                feedbackDiv.style.color = 'red';
+            }
+        })
+        .catch(error => {
+            feedbackDiv.textContent = 'There was an error submitting the form. Please try again later.';
             feedbackDiv.style.color = 'red';
-        }
-    })
-    .catch(error => {
-        // Catch any fetch errors
-        feedbackDiv.textContent = 'There was an error submitting the form. Please try again later.';
-        feedbackDiv.style.color = 'red';
+        });
     });
 });
