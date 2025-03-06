@@ -74,13 +74,13 @@ nav ul li a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 60vh;
 }
 
 /* Responsive Adjustments for smaller screens */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh; /* Reduced height for mobile */
+        height: 60vh; /* Reduced height for mobile */
         padding: 20px 10px; /* Adjust padding for mobile */
     }
 }
@@ -92,10 +92,10 @@ nav ul li a:focus {
 }
 
 .hero-logo {
-    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    flex-shrink: 0;
 }
 
 .hero-logo img {
