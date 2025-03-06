@@ -117,6 +117,7 @@ nav ul li a:focus {
   margin: 10px 0;
 }
 
+/* Contact Form */
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -162,6 +163,21 @@ nav ul li a:focus {
 #contact-form textarea {
     resize: vertical; /* Allows resizing the textarea vertically */
     min-height: 150px;
+}
+
+/* Feedback Message */
+#form-feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#form-feedback.success {
+    color: #4CAF50; /* Green for success */
+}
+
+#form-feedback.error {
+    color: #FF6347; /* Red for error */
 }
 
 /* Footer Styles */
